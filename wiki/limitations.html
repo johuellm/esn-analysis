@@ -1,0 +1,548 @@
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <title>ESN Group Analysis Platform</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96472647-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            ESN Group Analysis Platform&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form id="form--group-search" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input id="input--group-search" type="text" min="1" class="form-control" placeholder="Group ID" required>
+            </div>
+            <button type="submit" class="btn btn-default">Lookup</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li >
+              <a href="../index.html">Home</a>
+            </li>
+            <li >
+              <a href="../group.html">Details</a>
+            </li>
+            <li  class="active" >
+              <a href="../wiki/index.html">Wiki</a>
+            </li>
+            <li >
+              <a href="../about.html">About</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+  <div class="card panel panel-default">
+    
+    <div class="panel-heading">
+      <button class="btn btn-default"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseExample"
+              aria-expanded="true"
+              aria-controls="collapseExample"
+      >
+          <span class="glyphicon glyphicon-menu-hamburger"></span> Menu
+      </button>
+    </div>
+
+    <div class="collapse in" id="collapseExample" aria-expanded="true">
+      <div id="overview-last-users" class="panel-body">
+        <div class="btn-group-vertical wiki-sidebar"  role="group">
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-globe"></span>
+            Graph Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="degree.html"
+             role="button"
+          >
+            Degree
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="closeness.html"
+             role="button"
+          >
+            Closeness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="betweenness.html"
+             role="button"
+          >
+            Betweenness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="eigenvector.html"
+             role="button"
+          >
+            Eigenvector
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="density.html"
+             role="button"
+          >
+            Density
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="clustering.html"
+             role="button"
+          >
+            Clustering
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="nodes_edges.html"
+             role="button"
+          >
+            Nodes &amp; Edges
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-user"></span>
+            ESN Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="messages_created.html"
+             role="button"
+          >
+            Messages Created
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_time.html"
+             role="button"
+          >
+            Avery Time First Reply
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_replies.html"
+             role="button"
+          >
+            Avery Replies per Thread
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reciprocity.html"
+             role="button"
+          >
+            Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_reciprocity.html"
+             role="button"
+          >
+            Thread Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reply_creation_ratio.html"
+             role="button"
+          >
+            Reply Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_creation_ratio.html"
+             role="button"
+          >
+            Thread Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="user_activity.html"
+             role="button"
+          >
+            User Activity over Time
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="group_activity.html"
+             role="button"
+          >
+            Group Activity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="passivity.html"
+             role="button"
+          >
+            Passivity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="registered_date.html"
+             role="button"
+          >
+            Registered Date
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-info-sign"></span>
+            Background
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="social_capital.html"
+             role="button"
+          >
+            Social Capital
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="esn.html"
+             role="button"
+          >
+            Enterprise Social Networks
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="sna.html"
+             role="button"
+          >
+            Social Network Analysis
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="research_meth.html"
+             role="button"
+          >
+            Research Methodology
+            
+          </a>    
+
+          <a class="btn btn-default btn-block disabled"
+             href="limitations.html"
+             role="button"
+          >
+            Limitations
+            <span class="glyphicon glyphicon-triangle-left"></span>
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="literature.html"
+             role="button"
+          >
+            Literature
+            
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'],]}
+  });
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/2.7-latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+    <div class="content-container content-container-wiki">
+
+      <div class="col-xs-12 col-sm-8 col-lg-10 text-justified">
+
+      <div id="loading-box" class="empty-state col-12 text-center">
+        <i class="fa fa-spinner fa-spin"></i>
+        <span>Loading</span>
+      </div>
+
+      
+
+<h1 id="discussion">Discussion</h1>
+<p>This thesis set out to achieve two goals.
+The first is to provide an overview of metrics that can be used to analyse Social Capital. 
+The second goal is a prototypical software that visualises the metrics on the group-level.</p>
+<p>The operationalisation of Social Capital via Social Network Analysis as proposed by Scott et al. (2014) amongst others
+is one of the multiple ways to analyse social networks according to the Social Network Analysis framework of Stieglitz et al. (2014).
+In this thesis it is applied to analyse the social structures of a network (Scott et al., 2012).
+Using this approach Social Capital is measured by analysing the relationships between actors and their positions in the network.
+Other data such as meta-data of the actors (departments, job titles) or the textual content of the interactions is not considered.</p>
+<p>Based on different conceptions of Social Capital in the literature (Granovetter, 1973; Coleman, 1988),
+the authors Burt et al. (2001), Adler et al. (2002) and Riemer et al. (2005)
+point out the shared commonalities of these conceptions and propose a complementary
+theory of Social Capital. 
+This theory forms the theoretical background for my thesis and analysis.
+Strong emphasis is put on Bonding and Bridging Social Capital and the
+respective perspectives (internal/external) and the theories (closure/structural holes).</p>
+<p>I propose a metric repository that links Social Network Analysis metrics to the different Social Capital perspectives and theories which allows users to measure the effects of Social Capital.
+These effects include the enhancement of collaboration and cooperation, identification of information, norms and trust and the gain of individual power (Nahapiet, 1998; Steinfield, 2009; Coleman, 1988; Granovetter, 1973).
+Since Riemer et al. (2015) and Mantymaki et al. (2016) claim that these effects improve group performance,
+management has an interest to measure these effects.
+Managers can use my metric repository and website prototype to analyse the effects in their network and utilise the results it in their decision-making process.</p>
+<p>I achieved both goals and provide a comprehensive metric repository as a basis for future analysis purposes.
+All metrics are prototypically implemented in the website utilising the proposed group model approach to apply the metrics to groups.
+In the following I discuss strengths and limitations of the metric repository
+and further development opportunities for the prototype.</p>
+<h2 id="metric-repository-discussion">Metric Repository Discussion</h2>
+<p>For the metric repository a total of 63 metrics were collected
+leading to a comprehensive and diverse set of metrics.
+Due to the scope of this thesis and the requirements for the metric repository, not all of these metrics are discussed in detail.
+Specialised metrics that are not found in the majority of the literature are only discussed briefly.
+The specialisation of those metrics might provide unique insights that
+are not covered by the common metrics.</p>
+<p>Because the metric repository is supposed to be a basis for analysis and implementation of software,
+the metrics are divided into categories based on their calculation schema.
+These two categories are graph metrics and Enterprise Social Network metrics.
+They allow users of the metric repository to use it as a reference for implementing software.
+Nevertheless, other categorisations are feasible as well.
+Hacker et al. (2016) categorise their metrics based on their interpretation and
+Riemer et al. (2015) categorise their metrics based on the metrics&#39; scope and whether Bonding or Bridging Social Capital is measured. </p>
+<p>The graph and the Enterprise Social Network metrics require calculation schemas
+which are taken from the literature.
+It is possible that there are different versions of calculation schemas for one metric.
+In this case the schema which is widely adopted in open-source implementations, e.g. igraph or tnet, is used.
+For the Enterprise Social Network metrics there are no schemas proposed in the literature and a lack of open-source implementations.
+Therefore I propose my own calculation schemas based on the description of the metrics.</p>
+<p>All metrics are implemented in my prototype and tested against my dataset.
+However, further evaluation of the different calculation schemas against other datasets is recommended.
+This could expose optimisation potential for the schemas that can be taken into account for future versions of the metric repository.
+It should be noted that the interpretations depend on the chosen calculation schema and
+different schemas might result in novel interpretations.</p>
+<p>The pseudo-code in section metrics is useful as it provides a concise and easy to understand representation of the calculation schema.
+However, it does not provide the fine-grained details required for a correct implementation of a given metric.
+Therefore, I encourage to use the SQL-statements from the appendix to implement software as they are unambiguous and provide
+a detailed calculation schema.
+The SQL-statements use advanced SQL syntax which may slightly differ depending on which SQL engine is used.</p>
+<p>For the collection of the metrics Social Network Site and Enterprise Social Network literature was utilised.
+Although Richter et al. (2009) and Ellison et al. (2007) mention the differences between Social Network Sites and Enterprise Social Networks, both can be modelled in the same type of graph by the means of Social Network Analysis.
+Therefore the metrics of Social Network Sites could be adapted to Enterprise Social Networks without issues.
+This allows the use of metrics proposed by Smith et al. (2009) and Angeletou et al. (2011) amongst others.
+Besides Social Network Sites and Enterprise Social Network literature, there are research papers concerned with offline social networks by authors such as Freeman et al. (1979) and Borgatti et al. (1998).
+Due to the scope of the thesis and my research approach in section \ref{research-approach}, these papers are not used to identify metrics.
+Nevertheless, the papers are used for providing additional background information for the identified metrics.</p>
+<p>The authors I cite provide their metric interpretation with the categorisation of low, medium and high values, that I adopted for my metric repository.
+What values are represented by low, medium and high depends on the particular metric and the network size.
+If the metric repository is utilised in an organisation for a specific network, the minimum, maximum values and quantiles should be determined to enable a comparison of the metrics. </p>
+<p>The metrics should be seen as indicators for Social Capital and multiple metrics should be considered before deriving conclusions.
+The interpretations need to be discussed in the context of a particular social network (Riemer et al., 2015),
+so users should be careful when interpreting single metrics in their networks.
+As some metrics are only sparsely backed by literature,
+further studies can be conducted to improve the confidence in the interpretations of such metrics.</p>
+<p>Other metrics are highly cited.
+They are usually &quot;simple&quot; to calculate and to understand and in most cases
+sufficient to infer conclusions about Social Capital according to Berger et al. (2014).
+The confidence in those conclusions is higher than in the less supported metrics
+that are more complex.</p>
+<p>The metric repository is comprehensive as of 2016.
+The subject of Enterprise Social Network analysis is gaining traction,
+so more metrics might be released in the future which should be added to the repository.
+The repository is not a static catalogue but a document that needs regular updates to stay relevant.</p>
+<h2 id="group-model-approach">Group Model Approach</h2>
+<p>In general, the global graph metrics are calculated for networks or groups
+and the ego-centric metrics are calculated for the individual nodes.
+My group model approach allows the calculation of these ego-centric graph metrics for groups.
+This is important for the calculation of the metrics linked to the internal and external perspectives of Social Capital.</p>
+<p>I developed a working implementation of the group model approach in my prototype.
+Metrics, that were developed for use on individuals in a network, were applied to groups.
+To date there are no other analysis with this approach conducted, so a comparison is not feasible.</p>
+<p>Since edges and nodes are removed in the approach, the structure of the network changes.
+For each group the network looks different and
+the side effects of the structure change are not considered.
+A more in-depth look into this group model approach is required
+to find out what side effects there might be.</p>
+<p>For example, the graph measures are all based on the distances between nodes.
+By removing edges and nodes, the network artificially gets smaller and the values for these particular metrics increase.
+This effect is supposed to be mitigated by the normalisation in the measures
+which allows the comparability of particular metrics across network boundaries.</p>
+<p>However, the number of edges and nodes that are removed varies per group.
+Therefore the proposed normalisation mechanisms are not sufficient and
+comparability of metrics across networks is not possible.
+A suggestion to restore this comparability would be to try and include the number of dropped edges and nodes in the calculation schema.</p>
+<h2 id="implementation">Implementation</h2>
+<p>The design of the prototype implementation is modular.
+Each of the components can be used in other projects without depending on the rest of the components.
+Only the dependencies must be installed for the calculation component, e.g. R and a relational database.
+The API can easily be extended to provide additional data, meta data and information and
+it can be consumed by alternative clients such as mobile applications.
+The frontend is responsive and works on all modern devices and browsers.
+Due to the usage of CSS3 legacy browsers such as Internet Explorer 11 and Firefox 48 or older are not supported.</p>
+<p>Scott et al. (2012) criticises that Social Network Analysis is static and does not take into account
+the dynamic system that a social network is.
+I deal with this criticism by providing a complete calculation history.
+The metrics can be calculated as snapshots on a regular time basis and be compared by the analyst.
+Currently the frontend does not provide suitable means for comparing this data except for the user activity graph.
+Only the tabular display of the different calculations is feasible,
+but visual comparison features could be implemented in future versions of the frontend.</p>
+<p>As my dataset is a static snapshot of a real-world database there
+are no changes in the data over time.
+Thus all calculations in the history contain the same values.
+Slicing the data by time intervals such as years and calculating the metrics on these slices is possible.</p>
+<p>Another limitation of the prototype is that it is only tested against Yammer datasets as other datasets were not available to me.
+To use other data sources, an adapter for the database might be necessary.
+My data set is anonymised and lacking personal user data.
+To improve the visualisation I extended the data by random user names, group names and thread names.
+These do not reflect any real entity in the given dataset.</p>
+<p>My dataset was lacking an explicit table with the threads in the network.
+Therefore I operationalised threads as posts that have gotten replies.
+This means that any metric which measures threads without replies cannot be calculated.
+The dataset provides additional classes of messages compared to the literature.
+While the literature only considers Posts, Replies and Likes, my dataset differentiates
+between Posts, Replies, Likes, Notifications and Mentions.
+Where only likes are considered in the metrics, the addition of notifications and mentions might be feasible.</p>
+<p>The software prototype puts a high load on the CPU and calculation can take time.
+I tested the resource usage of the prototype on a laptop with 4GB RAM and a 3520M CPU @ 2.90GHz Quad Core
+and a virtual server with a virtual CPU and 1.7GB of RAM (Google g1-small). </p>
+<p>The graph calculation for one group in a network with 252000 edges takes
+an average of 1 minute on the laptop and 3 minutes on the virtual server[^gdf].
+The Enterprise Social Network measures take less than 1 second on the laptop and an average of 3 seconds on the virtual server.
+For a network with 1000 groups, calculating all groups would take 16.6 or 50 hours respectively.
+The average was calculated over 20 runs of the calculation.</p>
+<p>For this test I calculated the metrics for a small network,
+so for bigger networks it takes more time.
+This raises the question of the scalability of the software.
+However, using a better computer with a strong CPU should be less limiting.</p>
+<p>The bottleneck of the application is the group modelling approach
+as a new network graph needs to be generated for each group.
+Since the calculation scripts are modular and flexible, another factor mitigating the bottleneck is the partial calculation of results. 
+The Enterprise Social Network metrics can be calculated daily and the graph metrics can be calculated weekly by the means of the calculation history.</p>
+<p>The use-cases of the prototype are strict and minimised to limit the scope of the prototype.
+There are opportunities to extend the website and the analysis, but this goes beyond this thesis.</p>
+<p>My visual design takes into account the recommendations from Shneiderman et al. (1996) and Few et al. (2006).
+However, the goal of the website is to educate and show as many metrics as possible
+therefore it is bigger compared to what Few et al. (2006) suggests.
+Some recommendations are not implemented due to limitations in the highcharts library.
+While Shneiderman et al. (1996) proposes detailed, interactive data analysis features,
+the highcharts library provides no advanced filtering and dynamic interactions by default.</p>
+<p>There are several minor issues with the layout in different versions of the browsers
+where the CSS is not perfectly optimised.
+Specifically the height of the boxes in medium sized displays and old browsers is skewed
+and currently no user-customised positioning of dashboard elements is possible.</p>
+<p>The metrics were mapped to the different chart types based on the characterisations of charts by Abela et al. (2013).
+While the characterisations provide a guideline, alternative mappings may be feasible as well depending on the context and the purpose of the visualisation.</p>
+<p>The software uses state of the art technologies in a modular concept with loose coupling.
+This makes it very flexible and usable in any constellation or software system.
+The disadvantage is that it requires more installation steps as compared to a monolithic software design.
+Therefore a docker container would make it easier for users to deploy the application.</p>
+<h2 id="implications-for-research-and-practice">Implications for Research and Practice</h2>
+<p>The metric repository provides a comprehensive starting point for research and practice alike including 63 metrics with standardised calculation schemas and metric interpretations.
+Due to the categorisation and concise structure of the metric repository,
+it can be used as reference for conducting further research or implementing software.</p>
+<p>In research the standardisation and normalisation of the metrics&#39; calculation schemas would allow for comparison across different papers.
+The group model approach allows researchers to utilise ego-centric metrics to analyse collective actors such as groups or entire networks.
+Instead of developing their own analysis scripts from scratch, they can use my prototype to develop software and analyse networks.</p>
+<p>Practitioners can use the prototype to see how a software system can be developed based on the available metrics.
+Since industry-standard technologies are used for the implementation of the prototype,
+it can be adopted quickly by other developers.
+As the software is modular and loosely coupled, customisation and adding new features is feasible without technical overhead.</p>
+<p>The visualisation is based on best practices that come from practitioners.
+Decision-makers can use the website as an overview of an organisation&#39;s social network.
+Groups are the centres for collaboration and cooperation (Riemer, 2015; Bechmann, 2012)
+so management is given the ability to identify trending groups, popular groups and engaging groups.
+The prototype is implemented as a dashboard which allows management
+to get a quick network overview  on a regular basis.
+This enables the monitoring of top-ranking groups in the network.
+Changes in the group rankings can be observed immediately and actions can be taken
+in case a group&#39;s performance is decreasing.
+For example, management can provide premiums based on a group&#39;s ranking or try to motivate groups that are lacking engagement.</p>
+<p>Currently the prototype is limited to the analysis on the group-level of an Enterprise Social Network.
+For managing an Enterprise Social Network additional tools besides the prototype should be used, e.g. analysis tools on the individual-level.
+The dashboard contains detailed information,
+so it is best used by managers with some experience in the analysis of Enterprise Social Networks.
+Future visualisations can provide a more simplified dashboard which
+also makes it usable by top-level managers without any experience in Enterprise Social Networks.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>This thesis provides an overview of the latest research on Social Capital and Enterprise Social Networks.
+It brings these two topics together by operationalising Social Capital via Social Network Analysis.
+Focus is put on the levels and perspectives of Social Capital: the internal and external perspective and the resulting theories that emerged from the two perspectives.
+It takes Burt&#39;s (2001) optimum group performance theory as a starting point for analysing Enterprise Social Network groups.
+Enterprise Social Networks are discussed and compared to Social Network Sites from which they originated.
+It is explained why organisations are increasingly interested in Enterprise Social Networks and why research in this field is gaining traction.
+The effects of Enterprise Social Networks, e.g. improved collaboration and cooperation, are linked to Social Capital that is established in such networks.</p>
+<p>Operationalising Social Capital via Social Network Analysis is done by modelling the interactions of actors in a social network as a graph where users are represented by nodes and interactions by edges.
+This allows the usage of Social Network Analysis metrics to measure Social Capital in Enterprise Social Networks.</p>
+<p>A comprehensive metric repository is compiled that contains metrics and their interpretations in the context of Social Capital.
+Based on the metric repository a visual prototype is designed and implemented.
+It has a focus on automated metric calculation and appropriate visualisation based on the IBCS standard.</p>
+<p>Future research can extend my metric repository with new metrics and existing metrics can be tested against different datasets.
+More studies on the metrics, like Viol et al. (2016) or Riemer et al. (2015) conducted, can provide additional insights with regards to the metrics&#39; interpretations.
+Less common metrics can be adopted to the group model approach and be implemented for the prototype.
+This enhances the analysis results and the comparison of groups in Enterprise Social Networks.</p>
+<p>The group model approach has limitations that can be addressed in further research.
+Specifically, an approach for avoiding side-effects such as the loss of normalisation should be researched.
+My group model approach should be applied to other datasets independently
+and its performance should be compared to alternative approaches.</p>
+<p>The analysis of meta-data information, e.g. department, job-lines, is proposed by Hacker et al. (2015).
+It is a trending field of research and has been applied to Social Network Sites by the New York Times and Google,
+while Viol et al. (2016) apply it to Enterprise Social Networks.
+Extending my analysis approach by the content-dimension might provide diverse insights and a new perspective on groups in Enterprise Social Networks.</p>
+<p><a href="https://jigsaw.google.com/projects/#perspective">https://jigsaw.google.com/projects/#perspective</a></p>
+<p>In conclusion, this thesis accomplishes to successfully operationalise Social Capital via Social Network Analysis in Enterprise Social Networks.
+This is realised by providing a comprehensive metric repository and building a visual software prototype on top of it.
+The group model approach enables the use of any metric to analyse Social Capital on the group-level.</p>
+<p>Based on the visualisation framework, presentations of the analysis results
+can be developed by the means of charts and tables.
+Such visualisations provide an overview of each group&#39;s performance in a particular network.
+Management can consider these group rankings in their decision-making process.</p>
+<p>Overall, the metric repository, the group model approach and the prototype can be used by academia and practice alike.
+A reference of metrics including the interpretations and calculation schemas is provided for further research endeavours.
+For practice a basic software system is delivered that can be extended and used for the analysis of groups in Enterprise Social Networks.</p>
+<p>With the increasing adoption of Enterprise Social Networks by organisations, their desire to analyse Enterprise Social Network data is growing.
+The research topic of Enterprise Social Network analysis is relevant right now and it is going to stay relevant in the near future.</p>
+
+
+      </div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,346 @@
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <title>ESN Group Analysis Platform</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96472647-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            ESN Group Analysis Platform&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form id="form--group-search" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input id="input--group-search" type="text" min="1" class="form-control" placeholder="Group ID" required>
+            </div>
+            <button type="submit" class="btn btn-default">Lookup</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li >
+              <a href="../index.html">Home</a>
+            </li>
+            <li >
+              <a href="../group.html">Details</a>
+            </li>
+            <li  class="active" >
+              <a href="../wiki/index.html">Wiki</a>
+            </li>
+            <li >
+              <a href="../about.html">About</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+  <div class="card panel panel-default">
+    
+    <div class="panel-heading">
+      <button class="btn btn-default"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseExample"
+              aria-expanded="true"
+              aria-controls="collapseExample"
+      >
+          <span class="glyphicon glyphicon-menu-hamburger"></span> Menu
+      </button>
+    </div>
+
+    <div class="collapse in" id="collapseExample" aria-expanded="true">
+      <div id="overview-last-users" class="panel-body">
+        <div class="btn-group-vertical wiki-sidebar"  role="group">
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-globe"></span>
+            Graph Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="degree.html"
+             role="button"
+          >
+            Degree
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="closeness.html"
+             role="button"
+          >
+            Closeness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="betweenness.html"
+             role="button"
+          >
+            Betweenness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="eigenvector.html"
+             role="button"
+          >
+            Eigenvector
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="density.html"
+             role="button"
+          >
+            Density
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="clustering.html"
+             role="button"
+          >
+            Clustering
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="nodes_edges.html"
+             role="button"
+          >
+            Nodes &amp; Edges
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-user"></span>
+            ESN Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="messages_created.html"
+             role="button"
+          >
+            Messages Created
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_time.html"
+             role="button"
+          >
+            Avery Time First Reply
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_replies.html"
+             role="button"
+          >
+            Avery Replies per Thread
+            
+          </a>
+          <a class="btn btn-default btn-block disabled"
+             href="reciprocity.html"
+             role="button"
+          >
+            Reciprocity
+            <span class="glyphicon glyphicon-triangle-left"></span>
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_reciprocity.html"
+             role="button"
+          >
+            Thread Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reply_creation_ratio.html"
+             role="button"
+          >
+            Reply Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_creation_ratio.html"
+             role="button"
+          >
+            Thread Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="user_activity.html"
+             role="button"
+          >
+            User Activity over Time
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="group_activity.html"
+             role="button"
+          >
+            Group Activity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="passivity.html"
+             role="button"
+          >
+            Passivity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="registered_date.html"
+             role="button"
+          >
+            Registered Date
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-info-sign"></span>
+            Background
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="social_capital.html"
+             role="button"
+          >
+            Social Capital
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="esn.html"
+             role="button"
+          >
+            Enterprise Social Networks
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="sna.html"
+             role="button"
+          >
+            Social Network Analysis
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="research_meth.html"
+             role="button"
+          >
+            Research Methodology
+            
+          </a>    
+
+          <a class="btn btn-default btn-block"
+             href="limitations.html"
+             role="button"
+          >
+            Limitations
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="literature.html"
+             role="button"
+          >
+            Literature
+            
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'],]}
+  });
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/2.7-latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+    <div class="content-container content-container-wiki">
+
+      <div class="col-xs-12 col-sm-8 col-lg-10 text-justified">
+
+      <div id="loading-box" class="empty-state col-12 text-center">
+        <i class="fa fa-spinner fa-spin"></i>
+        <span>Loading</span>
+      </div>
+
+      
+
+<h1 id="reciprocity">Reciprocity</h1>
+<p>The <em>reciprocity</em> metric determines the level of bi-directional interactions between users.
+Its value is calculated from dividing the in-degree by the out-degree as suggested by Viol et al. (2016).</p>
+<p>Smith et al. (2009) and Angeletou et al. (2011) propose the same idea, but divide the in-degree by the count of replying authors
+or the total degree, respectively.</p>
+<p>I propose to use the definition from Angeletou et al. (2011) as it describes the metric accurately and its values are normalised in the range from zero to one.
+This metric is calculated for individuals and therefore it is of ego-centric scope.</p>
+<p>The calculation for the reciprocity $r$ is as follows: </p>
+<pre>
+1. select count of posts where the given user is the targt
+2. select count of posts where the given user is the source or target
+3. r := count of received posts / total posts
+</pre>
+
+<p>Alternatively the calculation of the reciprocity $r$ can be done via the graph measures in-degree and total degree:
+$$r = \frac{d_{in}(v_i)}{d_{in}(v_i) + d_{out}(v_i)}$$</p>
+<!-- Interpretation/Dimension -->
+
+<p>Viol et al. (2016) relate a high reciprocity to <em>power users</em>, who are active and engage with other users in the network
+on a regular basis.
+They contribute by driving discussions and spawning threads with novel ideas and knowledge (Smith et al., 2009).</p>
+<p>A high reciprocity improves community activity and interactions between users (Angeletou et al., 2011).
+It is important that users contribute with a high intensity and regularity over a longer period of time.
+Preferably, they are active in all parts of the network, so it is densely connected.
+The dense connectedness and high engagement is a sign of Bonding Social Capital in the network.</p>
+<p>Reciprocal interactions are an indicator for strong social ties and Bonding Social Capital.
+It enables effective collaboration based on trust and a shared understanding.
+This teamwork can improve a network&#39;s performance according to Burt et al. (2001).</p>
+
+
+      </div>
+
+    </div>
+  </body>
+</html>

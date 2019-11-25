@@ -1,0 +1,630 @@
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <title>ESN Group Analysis Platform</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96472647-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            ESN Group Analysis Platform&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form id="form--group-search" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input id="input--group-search" type="text" min="1" class="form-control" placeholder="Group ID" required>
+            </div>
+            <button type="submit" class="btn btn-default">Lookup</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li >
+              <a href="../index.html">Home</a>
+            </li>
+            <li >
+              <a href="../group.html">Details</a>
+            </li>
+            <li  class="active" >
+              <a href="../wiki/index.html">Wiki</a>
+            </li>
+            <li >
+              <a href="../about.html">About</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+  <div class="card panel panel-default">
+    
+    <div class="panel-heading">
+      <button class="btn btn-default"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseExample"
+              aria-expanded="true"
+              aria-controls="collapseExample"
+      >
+          <span class="glyphicon glyphicon-menu-hamburger"></span> Menu
+      </button>
+    </div>
+
+    <div class="collapse in" id="collapseExample" aria-expanded="true">
+      <div id="overview-last-users" class="panel-body">
+        <div class="btn-group-vertical wiki-sidebar"  role="group">
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-globe"></span>
+            Graph Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="degree.html"
+             role="button"
+          >
+            Degree
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="closeness.html"
+             role="button"
+          >
+            Closeness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="betweenness.html"
+             role="button"
+          >
+            Betweenness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="eigenvector.html"
+             role="button"
+          >
+            Eigenvector
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="density.html"
+             role="button"
+          >
+            Density
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="clustering.html"
+             role="button"
+          >
+            Clustering
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="nodes_edges.html"
+             role="button"
+          >
+            Nodes &amp; Edges
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-user"></span>
+            ESN Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="messages_created.html"
+             role="button"
+          >
+            Messages Created
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_time.html"
+             role="button"
+          >
+            Avery Time First Reply
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_replies.html"
+             role="button"
+          >
+            Avery Replies per Thread
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reciprocity.html"
+             role="button"
+          >
+            Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_reciprocity.html"
+             role="button"
+          >
+            Thread Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reply_creation_ratio.html"
+             role="button"
+          >
+            Reply Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_creation_ratio.html"
+             role="button"
+          >
+            Thread Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="user_activity.html"
+             role="button"
+          >
+            User Activity over Time
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="group_activity.html"
+             role="button"
+          >
+            Group Activity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="passivity.html"
+             role="button"
+          >
+            Passivity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="registered_date.html"
+             role="button"
+          >
+            Registered Date
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-info-sign"></span>
+            Background
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="social_capital.html"
+             role="button"
+          >
+            Social Capital
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="esn.html"
+             role="button"
+          >
+            Enterprise Social Networks
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="sna.html"
+             role="button"
+          >
+            Social Network Analysis
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="research_meth.html"
+             role="button"
+          >
+            Research Methodology
+            
+          </a>    
+
+          <a class="btn btn-default btn-block"
+             href="limitations.html"
+             role="button"
+          >
+            Limitations
+            
+          </a>
+
+          <a class="btn btn-default btn-block disabled"
+             href="literature.html"
+             role="button"
+          >
+            Literature
+            <span class="glyphicon glyphicon-triangle-left"></span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'],]}
+  });
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/2.7-latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+    <div class="content-container content-container-wiki">
+
+      <div class="col-xs-12 col-sm-8 col-lg-10 text-justified">
+
+      <div id="loading-box" class="empty-state col-12 text-center">
+        <i class="fa fa-spinner fa-spin"></i>
+        <span>Loading</span>
+      </div>
+
+      
+
+<h2 id="bibliography" class="unnumbered">Bibliography</h2>
+<div id="refs" class="references">
+<div id="ref-Adler2002">
+<p>Adler, Paul S, and S.-W. Kwon. 2002. "SOCIAL CAPITAL: PROSPECTS FOR A NEW CONCEPT." <em>Academy of Management Review</em> 27 (1): 17-40. doi:<a href="https://doi.org/10.5465/AMR.2002.5922314">10.5465/AMR.2002.5922314</a>.</p>
+</div>
+<div id="ref-Ali-Hassan2015">
+<p>Ali-Hassan, Hossam, Dorit Nevo, and Michael Wade. 2015. "Linking dimensions of social media use to job performance: The role of social capital." <em>The Journal of Strategic Information Systems</em> 24 (2). Elsevier B.V.: 65-89. doi:<a href="https://doi.org/10.1016/j.jsis.2015.03.001">10.1016/j.jsis.2015.03.001</a>.</p>
+</div>
+<div id="ref-Angeletou2011">
+<p>Angeletou, Sofia, Matthew Rowe, and Harith Alani. 2011. "Modelling and analysis of user behaviour in online communities." In <em>International Semanticweb Conference (Iswc 2011)</em>, 10:35-50. doi:<a href="https://doi.org/10.1007/978-3-642-25093-4">10.1007/978-3-642-25093-4</a>.</p>
+</div>
+<div id="ref-Baker1990">
+<p>Baker, Wayne E. 1990. "Market Networks and Corporate Behavior." <em>American Journal of Sociology</em> 96 (3): 589-625. doi:<a href="https://doi.org/10.1086/229573">10.1086/229573</a>.</p>
+</div>
+<div id="ref-Bachle2006">
+<p>Baechle, Michael. 2006. "Social software." <em>Informatik-Spektrum</em> 29 (2): 121-24. doi:<a href="https://doi.org/10.1007/s00287-006-0063-2">10.1007/s00287-006-0063-2</a>.</p>
+</div>
+<div id="ref-Beauchamp1965">
+<p>Beauchamp, Murray A. 1965. "An improved index of centrality." <em>Behavioral Science</em> 10 (2): 161-63. doi:<a href="https://doi.org/10.1002/bs.3830100205">10.1002/bs.3830100205</a>.</p>
+</div>
+<div id="ref-Behrendt2014">
+<p>Behrendt, Sebastian, Alexander Richter, and Kai Riemer. 2014. "Conceptualisation of Digital Traces for the Identification of Informal Networks in Enterprise Social Networks." <em>ACIS 2014 Proceedings</em>, 10.</p>
+</div>
+<div id="ref-Berger2014">
+<p>Berger, Katharina, Julia Klier, Mathias Klier, and Alexander Richter. 2014. "Who is Key...? Characterizing Value Adding Users in Enterprise Social Networks." <em>22nd European Conference on Information Systems</em> Track 21 (September): 16. doi:<a href="https://doi.org/10.5167/uzh-96943">10.5167/uzh-96943</a>.</p>
+</div>
+<div id="ref-Blyler2003">
+<p>Blyler, Maureen, and Russell W. Coff. 2003. "Dynamic capabilities, social capital, and rent appropriation: Ties that split pies." <em>Strategic Management Journal</em> 24 (7): 677-86. doi:<a href="https://doi.org/10.1002/smj.327">10.1002/smj.327</a>.</p>
+</div>
+<div id="ref-Bonacich1987">
+<p>Bonacich, Phillip. 1987. "Power and Centrality : A Family of Measures." <em>American Journal of Sociology</em> 92 (5): 1170-82.</p>
+</div>
+<div id="ref-Boyd2007">
+<p>Boyd, Danah m., and Nicole B. Ellison. 2007. "Social Network Sites: Definition, History, and Scholarship." <em>Journal of Computer-Mediated Communication</em> 13 (1): 210-30. doi:<a href="https://doi.org/10.1111/j.1083-6101.2007.00393.x">10.1111/j.1083-6101.2007.00393.x</a>.</p>
+</div>
+<div id="ref-Bruns2013">
+<p>Bruns, Axel, and Stefan Stieglitz. 2013. "Towards more systematic Twitter analysis: metrics for tweeting activities." <em>International Journal of Social Research Methodology</em> 16 (2): 91-108. doi:<a href="https://doi.org/10.1080/13645579.2012.756095">10.1080/13645579.2012.756095</a>.</p>
+</div>
+<div id="ref-Burt1992">
+<p>Burt. 1992. <em>Structural holes: The social structure of competition</em>. Harvard University Press.</p>
+</div>
+<div id="ref-Burt1993">
+<p>Burt, R.S. 1993. "The Social Structure of Competition." In <em>Explorations in Economic Sociology</em>, 65:57-91. New York: Russel Sage Foundation.</p>
+</div>
+<div id="ref-Burt2001">
+<p>Burt, R.S. 2001. "Structural holes versus network closure as social capital." doi:<a href="https://doi.org/Burt_2001">Burt_2001</a>.</p>
+</div>
+<div id="ref-Burt2000">
+<p>Burt, Ronald S. 2000. "The Network Structure Of Social Capital." <em>Research in Organizational Behavior</em> 22. Elsevier Masson SAS: 345-423. doi:<a href="https://doi.org/10.1016/S0191-3085(00)22009-1">10.1016/S0191-3085(00)22009-1</a>.</p>
+</div>
+<div id="ref-Chan2010">
+<p>Chan, Jeffrey, and Conor Hayes. 2010. "Decomposing Discussion Forums using User Roles." <em>Proceedings of the WebSci10: Extending the Frontiers of Society On-Line</em> 112 (988): 215-18. <a href="http://aran.library.nuigalway.ie/xmlui/handle/10379/1114" class="uri">http://aran.library.nuigalway.ie/xmlui/handle/10379/1114</a>.</p>
+</div>
+<div id="ref-Clark1991">
+<p>Clark, Herbert H., and Susan E. Brennan. 1991. "Grounding in communication." In <em>Perspectives on Socially Shared Cognition.</em>, 127-49. Washington: American Psychological Association. doi:<a href="https://doi.org/10.1037/10096-006">10.1037/10096-006</a>.</p>
+</div>
+<div id="ref-Codd1970">
+<p>Codd, E F. 1970. "A relational model of data for large shared data banks." <em>Communications of the ACM</em> 13 (6): 377-87. doi:<a href="https://doi.org/10.1145/357980.358007">10.1145/357980.358007</a>.</p>
+</div>
+<div id="ref-Coleman1988">
+<p>Coleman, James S. 1988. "Social Capital in the Creation of Human Capital." <em>American Journal of Sociology</em> 94 (6): S95-S120. doi:<a href="https://doi.org/10.1086/228943">10.1086/228943</a>.</p>
+</div>
+<div id="ref-Coleman1990">
+<p>Coleman, James S. 1990. <em>Foundations of Social Theory</em>. Harvard University Press.</p>
+</div>
+<div id="ref-DiMicco2009">
+<p>DiMicco, Joan M., Werner Geyer, David R. Millen, Casey Dugan, and Beth Brownholtz. 2009. "People sensemaking and relationship building on an enterprise social network site." <em>Proceedings of the 42nd Annual Hawaii International Conference on System Sciences</em>, 1-10. doi:<a href="https://doi.org/10.1109/HICSS.2009.343">10.1109/HICSS.2009.343</a>.</p>
+</div>
+<div id="ref-Dimicco2007">
+<p>DiMicco, Joan Morris, and David R. Millen. 2007. "Identity Management : Multiple Presentations of Self in Facebook." <em>Group'07</em>, 1-4. doi:<a href="https://doi.org/10.1145/1316624.1316682">10.1145/1316624.1316682</a>.</p>
+</div>
+<div id="ref-Distefano2009">
+<p>Distefano, Christine, Min Zhu, and Diana Mindrila. 2009. "Understanding and using factor scores: Considerations for the applied researcher." <em>Practical Assessment, Research &amp; Evaluation</em> 14 (20): 1-11. doi:<a href="https://doi.org/10.1.1.460.8553">10.1.1.460.8553</a>.</p>
+</div>
+<div id="ref-Ellison2015">
+<p>Ellison, N B, J L Gibbs, and M S Weber. 2015. "The use of enterprise social network sites for knowledge sharing in distributed organizations: The role of organizational affordances." <em>American Behavioral Scientist</em> 59 (1): 103-23. doi:<a href="https://doi.org/Doi 10.1177/0002764214540510">Doi 10.1177/0002764214540510</a>.</p>
+</div>
+<div id="ref-Ellison2013">
+<p>Ellison, Nicole B., and Danah M. Boyd. 2013. "Sociality through social network sites." <em>The Oxford Handbook of Internet Studies</em>, 151-72. doi:<a href="https://doi.org/10.1093/oxfordhb/9780199589074.001.0001">10.1093/oxfordhb/9780199589074.001.0001</a>.</p>
+</div>
+<div id="ref-Ellison2007">
+<p>Ellison, Nicole B., Charles Steinfield, and Cliff Lampe. 2007. "The Benefits of Facebook 'Friends:' Social Capital and College Students' Use of Online Social Network Sites." <em>Journal of Computer-Mediated Communication</em> 12 (4): 1143-68. doi:<a href="https://doi.org/10.1111/j.1083-6101.2007.00367.x">10.1111/j.1083-6101.2007.00367.x</a>.</p>
+</div>
+<div id="ref-Freeman1977">
+<p>Freeman, Linton C. 1977. "A Set of Measures of Centrality Based on Betweenness." <em>Sociometry</em> 40 (1): 35-41.</p>
+</div>
+<div id="ref-Freeman1979">
+<p>Freeman, Linton C. 1979. "Centrality in Social Networks: Conceptual Clarification." <em>Social Networks</em> 1: 215-39.</p>
+</div>
+<div id="ref-Fulk2013">
+<p>Fulk, Janet, and Y. Connie Yuan. 2013. "Location, motivation, and social capitalization via enterprise social networking." <em>Journal of Computer-Mediated Communication</em> 19 (1): 20-37. doi:<a href="https://doi.org/10.1111/jcc4.12033">10.1111/jcc4.12033</a>.</p>
+</div>
+<div id="ref-Gantz2011">
+<p>Gantz, John, and David Reinsel. 2011. "Extracting Value from Chaos State of the Universe : An Executive Summary." <em>IDC IView</em> iView (June): 1-12.</p>
+</div>
+<div id="ref-Granovetter1973">
+<p>Granovetter, Mark S. 1973. "The Strength of Weak Ties." <em>American Journal of Sociology</em> 78 (6): 1360-80. doi:<a href="https://doi.org/10.1086/225469">10.1086/225469</a>.</p>
+</div>
+<div id="ref-Hacker2015">
+<p>Hacker, Janine, Rebecca Bernsmann, and Kai Riemer. 2015. "Dimensions of User Behaviour in Enterprise Social Networks." <em>Social Knowledge Management in Action</em>.</p>
+</div>
+<div id="ref-Hacker2016">
+<p>Hacker, Janine, Kai Riemer, and Rebecca Bernsmann. 2016. "Discovering Knowledge Actor Roles in Enterprise Social Networks - a Case Study in a Professional Services Firm." <em>Proceedings of the 37th International Conference on Information Systems</em>, 1-16.</p>
+</div>
+<div id="ref-Hafermalz2015">
+<p>Hafermalz, Ella, Dirk S Hovorka, and Kai Riemer. 2015. "Shared Secret Places : Social Media and Affordances," 1-11.</p>
+</div>
+<div id="ref-Hansen2010">
+<p>Hansen, Derek L., Ben Shneiderman, and Marc Smith. 2010. "Visualizing threaded conversation networks: Mining message boards and email lists for actionable insights." <em>Lecture Notes in Computer Science (Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)</em> 6335 LNCS: 47-62. doi:<a href="https://doi.org/10.1007/978-3-642-15470-6_7">10.1007/978-3-642-15470-6_7</a>.</p>
+</div>
+<div id="ref-Hansen1999">
+<p>Hansen, Morten T. 1999. "The Search-Transfer Problem: The Role of Weak Ties in Sharing Knowledge across Organization Subunits." <em>Administrative Science Quarterly</em> 44 (1): 82. doi:<a href="https://doi.org/10.2307/2667032">10.2307/2667032</a>.</p>
+</div>
+<div id="ref-Hatch2012">
+<p>Hatch, Mary J. 2012. "Organizational Culture." In <em>Organization Theory</em>, 159-73. Canada: Oxford University Press.</p>
+</div>
+<div id="ref-Herzog2013">
+<p>Herzog, Christian, Alexander Richter, Melanie Steinhueser, Uwe Hoppe, and Michael Koch. 2013. "Methods and metrics for measuring the success of Enterprise Social Software - what we can learn from practice and vice versa." <em>Proceedings of the 21st European Conference on Information Systems (ECIS 2013)</em>, 1-12.</p>
+</div>
+<div id="ref-Holtzblatt2013">
+<p>Holtzblatt, Lester, L. Drury, Jill, Daniel Weiss, Laurie E. Damianos, and Donna Cuomo. 2013. "Social Media for Organizations Social Media Platform." <em>Social Media for Organizations</em> 1 (1): 1-21.</p>
+</div>
+<div id="ref-Jansen2002">
+<p>Jansen, Dorothea. 2002. "Netzwerkansaetze in der Organisationsforschung." <em>Koelner Zeitschrift Fuer Soziologie Und Sozialpsychologie, Sonderheft 42</em>, 88-118.</p>
+</div>
+<div id="ref-Jarrahi2013">
+<p>Jarrahi, Mohammad Hossein, and Steve Sawyer. 2013. "Social Technologies, Informal Knowledge Practices, and the Enterprise." <em>Journal of Organizational Computing and Electronic Commerce</em> 23 (1-2): 110-37. doi:<a href="https://doi.org/10.1080/10919392.2013.748613">10.1080/10919392.2013.748613</a>.</p>
+</div>
+<div id="ref-Kaisler2013">
+<p>Kaisler, Stephen, Frank Armour, J. Alberto Espinosa, and William Money. 2013. "Big Data: Issues and Challenges Moving Forward." <em>2013 46th Hawaii International Conference on System Sciences</em>, 995-1004. doi:<a href="https://doi.org/10.1109/HICSS.2013.645">10.1109/HICSS.2013.645</a>.</p>
+</div>
+<div id="ref-Karoui2015">
+<p>Karoui, Myriam, Aurelie Dudezert, and Dorothy E. Leidner. 2015. "Strategies and symbolism in the adoption of organizational social networking systems." <em>The Journal of Strategic Information Systems</em> 24 (1). Elsevier B.V.: 15-32. doi:<a href="https://doi.org/10.1016/j.jsis.2014.11.003">10.1016/j.jsis.2014.11.003</a>.</p>
+</div>
+<div id="ref-Kietzmann2011">
+<p>Kietzmann, Jan H., Kristopher Hermkens, Ian P. McCarthy, and Bruno S. Silvestre. 2011. "Social media? Get serious! Understanding the functional building blocks of social media." <em>Business Horizons</em> 54 (3): 241-51. doi:<a href="https://doi.org/10.1016/j.bushor.2011.01.005">10.1016/j.bushor.2011.01.005</a>.</p>
+</div>
+<div id="ref-Kline2013">
+<p>Kline, Joel, and Konstanze Alex-Brown. 2013. "The Social Body of Knowledge: Nurturing Organizational Social Capital via Social Media Based Communities of Practice." <em>Technical Communication</em> 60 (4): 279-92.</p>
+</div>
+<div id="ref-Koka2002">
+<p>Koka, Balaji R., and John E. Prescott. 2002. "Strategic alliances as social capital: A multidimensional view." <em>Strategic Management Journal</em> 23 (9): 795-816. doi:<a href="https://doi.org/10.1002/smj.252">10.1002/smj.252</a>.</p>
+</div>
+<div id="ref-Krackhardt1992">
+<p>Krackhardt, David. 1992. "The strength of strong ties: The importance of Philos in organizations." doi:<a href="https://doi.org/10.1177/1043463103154001">10.1177/1043463103154001</a>.</p>
+</div>
+<div id="ref-Kraut2002">
+<p>Kraut, R. E., S. R. Fussell, S. E. Brennan, and J. Siegal. 2002. "Understanding effects of prox- imity on collaboration: Implications for technologies to support remote collaborative work." In <em>Distributed Work</em>, edited by P. J. Hinds and S. Kiesler, 137-62. Cambridge, MA: MIT Press.</p>
+</div>
+<div id="ref-Kuegler2015">
+<p>Kuegler, Maurice, Stefan Smolnik, and Gerald Kane. 2015. "What's in IT for employees? Understanding the relationship between use and performance in enterprise social software." <em>The Journal of Strategic Information Systems</em> 24 (2). Elsevier B.V.: 90-112. doi:<a href="https://doi.org/10.1016/j.jsis.2015.04.001">10.1016/j.jsis.2015.04.001</a>.</p>
+</div>
+<div id="ref-Leidner2010">
+<p>Leidner, Dorothy, Hope Koch, and Ester Gonzalez. 2010. "Assimilating Generation Y IT New Hires into USAAs workforce: The role of an Enterprise 2.0 System." <em>MIS Quarterly Executive</em> 9 (4): 229-42.</p>
+</div>
+<div id="ref-Leonardi2015">
+<p>Leonardi, Paul M, and Samantha R Meyer. 2015. "Social Media as Social Lubricant: How Ambient Awareness Eases Knowledge Transfer." <em>American Behavioral Scientist</em> 59 (1): 10-34. doi:<a href="https://doi.org/10.1177/0002764214540509">10.1177/0002764214540509</a>.</p>
+</div>
+<div id="ref-Leonardi2012">
+<p>Leonardi, Paul M., and Jeffrey W. Treem. 2012. "Knowledge management technology as a stage for strategic self-presentation: Implications for knowledge sharing in organizations." <em>Information and Organization</em> 22 (1). Elsevier Ltd: 37-59. doi:<a href="https://doi.org/10.1016/j.infoandorg.2011.10.003">10.1016/j.infoandorg.2011.10.003</a>.</p>
+</div>
+<div id="ref-Leonardi2013">
+<p>Leonardi, Paul M., Marleen Huysman, and Charles Steinfield. 2013. "Enterprise social media: Definition, history, and prospects for the study of social technologies in organizations." <em>Journal of Computer-Mediated Communication</em> 19 (1): 1-19. doi:<a href="https://doi.org/10.1111/jcc4.12029">10.1111/jcc4.12029</a>.</p>
+</div>
+<div id="ref-Majchrzak2013">
+<p>Majchrzak, Ann, Samer Faraj, Gerald C. Kane, and Bijan Azad. 2013. "The Contradictory Influence of Social Media Affordances on Online Communal Knowledge Sharing." <em>Journal of Computer-Mediated Communication</em> 19 (1): 38-55. doi:<a href="https://doi.org/10.1111/jcc4.12030">10.1111/jcc4.12030</a>.</p>
+</div>
+<div id="ref-Mantymaki2016">
+<p>Maentymaeki, Matti, and Kai Riemer. 2016. "Enterprise social networking: A knowledge management perspective." <em>International Journal of Information Management</em> 36 (6). Elsevier Ltd: 1042-52. doi:<a href="https://doi.org/10.1016/j.ijinfomgt.2016.06.009">10.1016/j.ijinfomgt.2016.06.009</a>.</p>
+</div>
+<div id="ref-McAfee2006">
+<p>McAfee, Andrew P. 2006. "Enterprise 2.0: The Dawn of Emergent Collaboration." <em>MIT Sloan Management Review</em> 47 (3): 21-28. doi:<a href="https://doi.org/10.1109/EMR.2006.261380">10.1109/EMR.2006.261380</a>.</p>
+</div>
+<div id="ref-McClard2008">
+<p>McClard, Anne, and Ken Anderson. 2008. "Focus on Facebook: Who Are We Anyway?" <em>Anthropology News</em> 49 (3): 10-12. doi:<a href="https://doi.org/10.1525/an.2008.49.3.10">10.1525/an.2008.49.3.10</a>.</p>
+</div>
+<div id="ref-Muller2009">
+<p>Muller, Michael J., Jill Freyne, Casey Dugan, David R. Millen, and Jennifer Thom-Santelli. 2009. "Return on Contribution: A Metric for Enterprise Social Software." In <em>ECSCW: Proceedings of the 11th European Conference on Computer Supported Cooperative Work</em>, 143-50. September.</p>
+</div>
+<div id="ref-Muller2012">
+<p>Muller, Michael, Kate Ehrlich, Tara Matthews, Adam Perer, Inbal Ronen, and Ido Guy. 2012. "Diversity Among Enterprise Online Communities." <em>Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI)</em>, 2815-24. doi:<a href="https://doi.org/10.1145/2207676.2208685">10.1145/2207676.2208685</a>.</p>
+</div>
+<div id="ref-Nahapiet1998">
+<p>Nahapiet, Janine, and Sumantra Ghoshal. 1998. "Social Capital, Intellectual Capital, and the Organizational Advantage." <em>The Academy of Management Review</em> 23 (2): 242-66.</p>
+</div>
+<div id="ref-Newman2010">
+<p>Newman, M E J. 2010. <em>Networks: An introduction</em>. Oxford University Press. doi:<a href="https://doi.org/10.1093/acprof:oso/9780199206650.001.0001">10.1093/acprof:oso/9780199206650.001.0001</a>.</p>
+</div>
+<div id="ref-Portes1998">
+<p>Portes, Alejandro. 1998. "Social capital: Its origins and applications in modern sociology." <em>Annual Review of Sociology</em> 24 (1): 1-24. doi:<a href="https://doi.org/10.1146/annurev.soc.24.1.1">10.1146/annurev.soc.24.1.1</a>.</p>
+</div>
+<div id="ref-Putnam1995">
+<p>Putnam, Robert D. 1995. "Bowling Alone: America's Declining Social Capital." <em>Journal of Democracy</em> 6 (1): 65-78. doi:<a href="https://doi.org/10.1353/jod.1995.0002">10.1353/jod.1995.0002</a>.</p>
+</div>
+<div id="ref-Putnam2000">
+<p>Putnam, Robert D. 2000. <em>Bowling Alone: The Collapse and Revival of American Community</em>. New York, USA: Simon; Schuster.</p>
+</div>
+<div id="ref-Razmerita2014">
+<p>Razmerita, Liana, Kathrin Kirchner, and Thierry Nabeth. 2014. "Social Media in Organizations: Leveraging Personal and Collective Knowledge Processes." <em>Journal of Organizational Computing and Electronic Commerce</em> 24 (1): 74-93. doi:<a href="https://doi.org/10.1080/10919392.2014.866504">10.1080/10919392.2014.866504</a>.</p>
+</div>
+<div id="ref-Reagans2001">
+<p>Reagans, Ray, and Ezra W. Zuckerman. 2001. "Networks , Diversity , and Productivity : The Social Capital of Corporate R &amp; D Teams." <em>Organization Science</em> 12 (4): 502-17. doi:<a href="https://doi.org/10.1287/orsc.12.4.502.10637">10.1287/orsc.12.4.502.10637</a>.</p>
+</div>
+<div id="ref-Richter2009">
+<p>Richter, Alexander, and Kai Riemer. 2009. "Corporate social networking sites - Modes of use and appropriation through co-evolution." <em>Acis 2009</em>, no. Schooley 2005: 1-10.</p>
+</div>
+<div id="ref-Richter2011">
+<p>Richter, Daniel, Kai Riemer, and Jan vom Brocke. 2011. "Internet Social Networking." <em>Business &amp; Information Systems Engineering</em> 3 (2): 89-101. doi:<a href="https://doi.org/10.1007/s12599-011-0151-y">10.1007/s12599-011-0151-y</a>.</p>
+</div>
+<div id="ref-Riemer2005">
+<p>Riemer, Kai. 2005. <em>Sozialkapital und Kooperation: Zur Rolle von Sozialkapital im Management zwischenbetrieblicher Kooperationsbeziehungen</em>. 3rd ed. Mohr Siebeck.</p>
+</div>
+<div id="ref-Riemer2015">
+<p>Riemer, Kai, Jan Finke, and Dirk Hovorka. 2015. "Bridging or Bonding : Do Individuals gain Social Capital from Participation in Enterprise Social Networks ?" <em>Thirty Sixth International Conference on Information Systems</em>, 1-20.</p>
+</div>
+<div id="ref-Riemer2012">
+<p>Riemer, Kai, Paul Scifleet, and Ruwen Reddig. 2012. "Powercrowd: Enterprise Social Networking in Professional Service Work: A Case Study of Yammer at Deloitte Australia." <em>Working Papers - Business Information Systems (BIS)</em> WP2012 02 (16-May-2012).</p>
+</div>
+<div id="ref-Rowe2013">
+<p>Rowe, Matthew, Miriam Fernandez, Sofia Angeletou, and Harith Alani. 2013. "Community analysis through semantic rules and role composition derivation." <em>Journal of Web Semantics</em> 18: 31-47. doi:<a href="https://doi.org/10.1016/j.websem.2012.05.002">10.1016/j.websem.2012.05.002</a>.</p>
+</div>
+<div id="ref-Sabidussi1966">
+<p>Sabidussi, Gert. 1966. "The centrality index of a graph." <em>Psychometrika</em> 31 (4): 581-603. doi:<a href="https://doi.org/10.1007/BF02289527">10.1007/BF02289527</a>.</p>
+</div>
+<div id="ref-Sandefur1998">
+<p>Sandefur, R. L., and E. O. Laumann. 1998. "A PARADIGM FOR SOCIAL CAPITAL." <em>Rationality and Society</em> 10 (4): 481-501. doi:<a href="https://doi.org/10.1177/104346398010004005">10.1177/104346398010004005</a>.</p>
+</div>
+<div id="ref-Scott2012">
+<p>Scott, John. 2012. <em>What is Social Network Analysis?</em> 1st ed. Bloomsbury Publishing.</p>
+</div>
+<div id="ref-Scott2014">
+<p>Scott, John, and Peter Carrington. 2014. <em>The SAGE Handbook of Social Network Analysis</em>. 1 Oliver's Yard, 55 City Road, London EC1Y 1SP United Kingdom: SAGE Publications Ltd. doi:<a href="https://doi.org/10.4135/9781446294413">10.4135/9781446294413</a>.</p>
+</div>
+<div id="ref-Seibert2001">
+<p>Seibert, SE Scott E, ML Maria L Kraimer, and RC Robert C Liden. 2001. "A social capital theory of career success." <em>Academy of Management Journal</em> 44 (2): 219-37. doi:<a href="https://doi.org/10.2307/3069452">10.2307/3069452</a>.</p>
+</div>
+<div id="ref-Sih2009">
+<p>Sih, Andrew, Sean F. Hanser, and Katherine A. McHugh. 2009. "Social network theory: New insights and issues for behavioral ecologists." <em>Behavioral Ecology and Sociobiology</em> 63 (7): 975-88. doi:<a href="https://doi.org/10.1007/s00265-009-0725-6">10.1007/s00265-009-0725-6</a>.</p>
+</div>
+<div id="ref-Silberschatz2011">
+<p>Silberschatz, Abraham, H.F. Korth, and S. Sudarshan. 2011. <em>Database System Concepts</em>. 6th ed. McGraw-Hill. doi:<a href="https://doi.org/10.1145/253671.253760">10.1145/253671.253760</a>.</p>
+</div>
+<div id="ref-Singh2011">
+<p>Singh, Param Vir, Yong Tan, and Vijay Mookerjee. 2011. "Network Effects: the Influence of Structural Capital on Open Source Project Success." <em>Mis Quarterly</em> 35 (4): 813-29.</p>
+</div>
+<div id="ref-Smith2009">
+<p>Smith, M, D L Hansen, and E Gleave. 2009. "Analyzing Enterprise Social Media Networks." <em>2009 International Conference on Computational Science and Engineering</em> 4: 705-10. doi:<a href="https://doi.org/10.1109/CSE.2009.468">10.1109/CSE.2009.468</a>.</p>
+</div>
+<div id="ref-Steinfield2009">
+<p>Steinfield, Charles, Joan M DiMicco, Nicole B Ellison, and Cliff Lampe. 2009. "Bowling Online : Social Networking and Social Capital within the Organization." <em>Distribution</em>, 245-54. doi:<a href="https://doi.org/10.1145/1556460.1556496">10.1145/1556460.1556496</a>.</p>
+</div>
+<div id="ref-Stieglitz2014">
+<p>Stieglitz, Stefan, Linh Dang-Xuan, Axel Bruns, and Christoph Neuberger. 2014. "Socialmedia analytics." <em>Business and Information Systems Engineering</em> 6 (2): 89-96. doi:<a href="https://doi.org/10.1007/s12599-014-0315-7">10.1007/s12599-014-0315-7</a>.</p>
+</div>
+<div id="ref-Tang2010">
+<p>Tang, John, Mirco Musolesi, Cecilia Mascolo, Vito Latora, and Vincenzo Nicosia. 2010. "Analysing information flows and key mediators through temporal centrality metrics." In <em>Proceedings of the 3rd Workshop on Social Network Systems - Sns '10</em>, 1-6. New York, New York, USA: ACM Press. doi:<a href="https://doi.org/10.1145/1852658.1852661">10.1145/1852658.1852661</a>.</p>
+</div>
+<div id="ref-Tidwell2010">
+<p>Tidwell, Jenifer. 2010. <em>Designing Interfaces</em>. 2nd ed. O'Reilly Media.</p>
+</div>
+<div id="ref-Tobergte2013">
+<p>Tobergte, David R., and Shirley Curtis. 2013. "Powercrowd: Enterprise Social Networking in Professional Service Work: A Case Study of Yammer at Deloitte Australia." <em>Journal of Chemical Information and Modeling</em> 53 (9): 1689-99. doi:<a href="https://doi.org/10.1017/CBO9781107415324.004">10.1017/CBO9781107415324.004</a>.</p>
+</div>
+<div id="ref-Treem2012">
+<p>Treem, Jeffrey W, and Paul M Leonardi. 2012. "Social Media use in organizations." <em>Communication Yearbook</em>, 143-89. doi:<a href="https://doi.org/10.2139/ssrn.2129853">10.2139/ssrn.2129853</a>.</p>
+</div>
+<div id="ref-Trier2015">
+<p>Trier, Matthias, and Alexander Richter. 2015. "The deep structure of organizational online networking - an actor-oriented case study." <em>Information Systems Journal</em> 25 (5): 465-88. doi:<a href="https://doi.org/10.1111/isj.12047">10.1111/isj.12047</a>.</p>
+</div>
+<div id="ref-Tsai1998">
+<p>Tsai, W., and S. Ghoshal. 1998. "SOCIAL CAPITAL AND VALUE CREATION: THE ROLE OF INTRAFIRM NETWORKS." <em>Academy of Management Journal</em> 41 (4): 464-76. doi:<a href="https://doi.org/10.2307/257085">10.2307/257085</a>.</p>
+</div>
+<div id="ref-Tufte2001">
+<p>Tufte, Edward. 2001. <em>The Visual Display of Quantitative Information</em>. 2nd ed. Cheshire: CT: Graphics Press.</p>
+</div>
+<div id="ref-Tymon2003">
+<p>Tymon, Walter G., and Stephen a. Stumpf. 2003. "Social capital in the success of knowledge workers." <em>Career Development International</em> 8 (1): 12-20. doi:<a href="https://doi.org/10.1108/13620430310459478">10.1108/13620430310459478</a>.</p>
+</div>
+<div id="ref-Unger2009">
+<p>Unger, Russ, and Carolyn Chandler. 2009. <em>A Project Guide to UX Design</em>. 1st ed. Thousand Oaks: New Riders Publishing.</p>
+</div>
+<div id="ref-Varlamis2010">
+<p>Varlamis, Iraklis, Magdalini Eirinaki, and Malamati Louta. 2010. "A study on social network metrics and their application in trust networks." <em>Proceedings - 2010 International Conference on Advances in Social Network Analysis and Mining, ASONAM 2010</em>, 168-75. doi:<a href="https://doi.org/10.1109/ASONAM.2010.40">10.1109/ASONAM.2010.40</a>.</p>
+</div>
+<div id="ref-Vie2008">
+<p>Vie, Stephanie. 2008. "Digital Divide 2.0: 'Generation M' and Online Social Networking Sites in the Composition Classroom." <em>Computers and Composition</em> 25 (1): 9-23. doi:<a href="https://doi.org/10.1016/j.compcom.2007.09.004">10.1016/j.compcom.2007.09.004</a>.</p>
+</div>
+<div id="ref-Viegas2004">
+<p>Viegas, Fernanda B. 2004. "Visualizing the Activity of Individuals in Conversational Cyberspaces." <em>Source</em> 00 (C): 1-10.</p>
+</div>
+<div id="ref-Viol2016">
+<p>Viol, Janine, and Johannes Hess. 2016. "Information Systems Research on Enterprise Social Networks - A State-of-the-Art Analysis." <em>Multikonferenz Wirtschaftsinformatik (MKWI) 2016 - Band I</em> 0: 351-62.</p>
+</div>
+<div id="ref-Viol2015">
+<p>Viol, Janine, Rebecca Bernsmann, and Kai Riemer. 2015. "Behavioural Dimensions for Discovering Knowledge Actor Roles Utilising Enterprise Social Network Metrics." <em>CoRR</em> abs/1606.0: 1-13. <a href="http://arxiv.org/abs/1606.00883" class="uri">http://arxiv.org/abs/1606.00883</a>.</p>
+</div>
+<div id="ref-Wasserman1994">
+<p>Wasserman, Stanley, and Katherine Faust. 1994. <em>Social network analysis: Methods and applications</em>. Cambridge University Press.</p>
+</div>
+<div id="ref-Watson2002">
+<p>Watson, GeorgeW, and StevenD Papamarcos. 2002. "Social Capital and Organizational Commitment." <em>Journal of Business and Psychology</em> 16 (4): 537-52. doi:<a href="https://doi.org/10.1023/A:1015498101372">10.1023/A:1015498101372</a>.</p>
+</div>
+<div id="ref-WikipediaSummary2016">
+<p>Wikipedia Summary. 2016. <em>Social network analysis: Theory and Applications</em>.</p>
+</div>
+<div id="ref-Zammuto2007">
+<p>Zammuto, Raymond F., Terri L. Griffith, Ann Majchrzak, Deborah J. Dougherty, and Samer Faraj. 2007. "Information Technology and the Changing Fabric of Organization." <em>Organization Science</em> 18 (5): 749-62. doi:<a href="https://doi.org/10.1287/orsc.1070.0307">10.1287/orsc.1070.0307</a>.</p>
+</div>
+<div id="ref-Zhang2010">
+<p>Zhang, Jun, Yan Qu, Jane Cody, and Yuling Wu. 2010. "A Case Study of Micro-blogging in the Enterprise: Use, Value, and Related Issues." <em>Proceedings of the SIGCHI Conference 2010</em>, 123-32. doi:<a href="https://doi.org/10.1145/1753326.1753346">10.1145/1753326.1753346</a>.</p>
+</div>
+</div>
+
+
+      </div>
+
+    </div>
+  </body>
+</html>

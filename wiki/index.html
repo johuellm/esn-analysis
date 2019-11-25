@@ -1,0 +1,349 @@
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <title>ESN Group Analysis Platform</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96472647-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            ESN Group Analysis Platform&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form id="form--group-search" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input id="input--group-search" type="text" min="1" class="form-control" placeholder="Group ID" required>
+            </div>
+            <button type="submit" class="btn btn-default">Lookup</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li >
+              <a href="../index.html">Home</a>
+            </li>
+            <li >
+              <a href="../group.html">Details</a>
+            </li>
+            <li  class="active" >
+              <a href="../wiki/index.html">Wiki</a>
+            </li>
+            <li >
+              <a href="../about.html">About</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+  <div class="card panel panel-default">
+    
+    <div class="panel-heading">
+      <button class="btn btn-default"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseExample"
+              aria-expanded="true"
+              aria-controls="collapseExample"
+      >
+          <span class="glyphicon glyphicon-menu-hamburger"></span> Menu
+      </button>
+    </div>
+
+    <div class="collapse in" id="collapseExample" aria-expanded="true">
+      <div id="overview-last-users" class="panel-body">
+        <div class="btn-group-vertical wiki-sidebar"  role="group">
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-globe"></span>
+            Graph Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="degree.html"
+             role="button"
+          >
+            Degree
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="closeness.html"
+             role="button"
+          >
+            Closeness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="betweenness.html"
+             role="button"
+          >
+            Betweenness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="eigenvector.html"
+             role="button"
+          >
+            Eigenvector
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="density.html"
+             role="button"
+          >
+            Density
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="clustering.html"
+             role="button"
+          >
+            Clustering
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="nodes_edges.html"
+             role="button"
+          >
+            Nodes &amp; Edges
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-user"></span>
+            ESN Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="messages_created.html"
+             role="button"
+          >
+            Messages Created
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_time.html"
+             role="button"
+          >
+            Avery Time First Reply
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_replies.html"
+             role="button"
+          >
+            Avery Replies per Thread
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reciprocity.html"
+             role="button"
+          >
+            Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_reciprocity.html"
+             role="button"
+          >
+            Thread Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reply_creation_ratio.html"
+             role="button"
+          >
+            Reply Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_creation_ratio.html"
+             role="button"
+          >
+            Thread Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="user_activity.html"
+             role="button"
+          >
+            User Activity over Time
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="group_activity.html"
+             role="button"
+          >
+            Group Activity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="passivity.html"
+             role="button"
+          >
+            Passivity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="registered_date.html"
+             role="button"
+          >
+            Registered Date
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-info-sign"></span>
+            Background
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="social_capital.html"
+             role="button"
+          >
+            Social Capital
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="esn.html"
+             role="button"
+          >
+            Enterprise Social Networks
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="sna.html"
+             role="button"
+          >
+            Social Network Analysis
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="research_meth.html"
+             role="button"
+          >
+            Research Methodology
+            
+          </a>    
+
+          <a class="btn btn-default btn-block"
+             href="limitations.html"
+             role="button"
+          >
+            Limitations
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="literature.html"
+             role="button"
+          >
+            Literature
+            
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'],]}
+  });
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/2.7-latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+    <div class="content-container content-container-wiki">
+
+      <div class="col-xs-12 col-sm-8 col-lg-10 text-justified">
+
+      <div id="loading-box" class="empty-state col-12 text-center">
+        <i class="fa fa-spinner fa-spin"></i>
+        <span>Loading</span>
+      </div>
+
+      
+
+<h1 id="metric-repository-wiki">Metric Repository Wiki</h1>
+<p>On these pages I want to provide background information to the displayed metrics in the dashboard.
+The information is based on the contents of my master thesis <em>Measurement of Social Capital in Enterprise Social Networks: Identification and Visualization of Group Metrics</em>.
+I collected metrics from the literature and built a comprehensive metric repository, that can be used to analyse Enterprise Social Networks.
+In total 62 metrics were found, but here only most important ones are displayed -- namely the metrics that are also calculated and visualised in the dashboard.
+Originally all of these metrics were applied to individual users in a network, but with my <a href="research_meth.html">methodological approach</a> it is possible to apply the metrics to groups.</p>
+
+<div class="list-without-bullets">
+<p>
+In the menu on the lefthand side, there are three navigation groups:
+<ul>
+<li><span class="glyphicon glyphicon-globe"></span>Graph Metrics, that are based on <a href="sna.html">Social Network Analysis</a> measures.</li>
+<li><span class="glyphicon glyphicon-user"></span>ESN Metrics, that are based on <a href="esn.html">Enterprise Social Network</a> data.</li>
+<li><span class="glyphicon glyphicon-info-sign"></span>Background information, that provides in-depth theoretical underpinnings to the metrics and their interpretation as well as further reading.</li>
+</ul>
+</p>
+</div>
+
+<p>The metrics in this wiki are described in the same order.
+First the sources of the metric and its description are mentioned.
+It is determind if the metric is of global or ego-centric scope.
+The scope specifies whether a metric is relevant for an individual node and its neighbourhood (ego-centric) or if a metric is relevant for the entire network or group as a whole (global).</p>
+<p>Second the calcuation schema for the metric is discussed.
+This is how the metrics are implemented in the backend.</p>
+<p>Third is the interpretation of the metric.
+All the metrics are interpreted in the context of the <a href="social_capital.html">Social Capital</a> theory.
+The interpretation answers the question what a low or high value of each metrics means for the social capital of the group or the network.
+For example a high number of posts can mean, that a user is very active in the social network,
+while a low value indicates the opposite.
+Different authors provide their interpretations on metrics and try to classify users into user roles.
+These user roles and the metrics&#39; interpretations are discussed against the backdrop of the Social Capital theory.</p>
+
+
+      </div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,482 @@
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <title>ESN Group Analysis Platform</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96472647-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            ESN Group Analysis Platform&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form id="form--group-search" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input id="input--group-search" type="text" min="1" class="form-control" placeholder="Group ID" required>
+            </div>
+            <button type="submit" class="btn btn-default">Lookup</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li >
+              <a href="../index.html">Home</a>
+            </li>
+            <li >
+              <a href="../group.html">Details</a>
+            </li>
+            <li  class="active" >
+              <a href="../wiki/index.html">Wiki</a>
+            </li>
+            <li >
+              <a href="../about.html">About</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+  <div class="card panel panel-default">
+    
+    <div class="panel-heading">
+      <button class="btn btn-default"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseExample"
+              aria-expanded="true"
+              aria-controls="collapseExample"
+      >
+          <span class="glyphicon glyphicon-menu-hamburger"></span> Menu
+      </button>
+    </div>
+
+    <div class="collapse in" id="collapseExample" aria-expanded="true">
+      <div id="overview-last-users" class="panel-body">
+        <div class="btn-group-vertical wiki-sidebar"  role="group">
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-globe"></span>
+            Graph Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="degree.html"
+             role="button"
+          >
+            Degree
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="closeness.html"
+             role="button"
+          >
+            Closeness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="betweenness.html"
+             role="button"
+          >
+            Betweenness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="eigenvector.html"
+             role="button"
+          >
+            Eigenvector
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="density.html"
+             role="button"
+          >
+            Density
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="clustering.html"
+             role="button"
+          >
+            Clustering
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="nodes_edges.html"
+             role="button"
+          >
+            Nodes &amp; Edges
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-user"></span>
+            ESN Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="messages_created.html"
+             role="button"
+          >
+            Messages Created
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_time.html"
+             role="button"
+          >
+            Avery Time First Reply
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_replies.html"
+             role="button"
+          >
+            Avery Replies per Thread
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reciprocity.html"
+             role="button"
+          >
+            Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_reciprocity.html"
+             role="button"
+          >
+            Thread Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reply_creation_ratio.html"
+             role="button"
+          >
+            Reply Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_creation_ratio.html"
+             role="button"
+          >
+            Thread Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="user_activity.html"
+             role="button"
+          >
+            User Activity over Time
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="group_activity.html"
+             role="button"
+          >
+            Group Activity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="passivity.html"
+             role="button"
+          >
+            Passivity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="registered_date.html"
+             role="button"
+          >
+            Registered Date
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-info-sign"></span>
+            Background
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="social_capital.html"
+             role="button"
+          >
+            Social Capital
+            
+          </a>
+
+          <a class="btn btn-default btn-block disabled"
+             href="esn.html"
+             role="button"
+          >
+            Enterprise Social Networks
+            <span class="glyphicon glyphicon-triangle-left"></span>
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="sna.html"
+             role="button"
+          >
+            Social Network Analysis
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="research_meth.html"
+             role="button"
+          >
+            Research Methodology
+            
+          </a>    
+
+          <a class="btn btn-default btn-block"
+             href="limitations.html"
+             role="button"
+          >
+            Limitations
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="literature.html"
+             role="button"
+          >
+            Literature
+            
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'],]}
+  });
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/2.7-latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+    <div class="content-container content-container-wiki">
+
+      <div class="col-xs-12 col-sm-8 col-lg-10 text-justified">
+
+      <div id="loading-box" class="empty-state col-12 text-center">
+        <i class="fa fa-spinner fa-spin"></i>
+        <span>Loading</span>
+      </div>
+
+      
+
+<h1 id="enterprise-social-networks">Enterprise Social Networks</h1>
+<p>In the following I shortly argue for the relevancy of Enterprise Social research and discuss prior research.
+The differences between Social Network Sites and Enterprise Social Networks are pointed out.
+The major components and the goals of using such technology are discussed, followed by the functionality exposed to the users.
+Inferred from the functionality, I describe the effects of Enterprise Social Networks on an organisation and its impact on Social Capital.</p>
+<h2 id="relevancy">Relevancy</h2>
+<p>As of 2016 thousands of Social Network Sites of different kinds exist (Richter, 2009; Richter, 2011).
+They are being adopted and used throughout all demographics according to McClard et al. (2008) and Stieglitz et al. (2014).
+While Social Network Sites are popular among young demographics and used for their interactions with personal friends (Richter, 2011; Vie, 2008),
+their usage in business and politics is increasing (Stieglitz et al., 2014).
+Social Network Sites get more attention from organisations (Richter, 2011; Richter, 2009).
+Instead of participating in public Social Network Sites, organisations are looking to deploy their own internal Social Network Sites (DiMicco et al., 2007), which are called Enterprise Social Networks (McAfee et al., 2006).
+The primary reasons for deploying Enterprise Social Networks within organisational boundaries include knowledge exchange and collaboration purposes (Richter et al., 2011).
+Since the organisation is in control of the network, it can analyse all generated data.</p>
+<h2 id="prior-research">Prior Research</h2>
+<p>Enterprise Social Networks are still a small domain of research compared to Social Network Sites, but insights from SNS research can be appropriated (Richter et al., 2011).
+Early research on Social Network Sites was conducted in the domain of computer supported cooperative work (CSCW) and human-computer interaction (Leonardi et al., 2013) with first papers dating back to 2004 according to Boyd et al. (2007).
+Boyd et al. (2007) define Social Network Sites as web-based services with three distinctive characteristics. A user can:
+  (1) set-up a public profile,
+  (2) see a list of user connections and
+  (3) view and traverse social connections of others.</p>
+<p>The first paper to coin the term Enterprise Social Networks is from 2006 and called &quot;Enterprise 2.0: The Dawn of Emergent Collaboration&quot; by McAfee et al. (2006).
+In 2016 Viol conducted a literature review on publications dealing with Enterprise Social Networks, which I utilise to find relevant literature.
+They found six meta-topics of Enterprise Social Networks research:</p>
+<ul>
+<li>Implementation</li>
+<li>Motivation</li>
+<li>Usage and Behaviour</li>
+<li>Impact on Organisation</li>
+<li>Success Measurement</li>
+<li>Data and Data Analytics</li>
+</ul>
+<p><strong>Usage and Behaviour</strong> is concerned with the creation of knowledge (Riemer et al, 2011a; Riemer &amp; Scifleet, 2012), expert search (Richter &amp; Riemer, 2009) and professional versus hedonic uses (Kügler &amp; Smolnik, 2014).
+I use the research papers for identifying common functionality of Enterprise Social Network software and why organisations are looking to use it.
+The research topic of <strong>Impact on Organisation</strong> tries to find out how team collaboration and work performance are improved (Alexander, 2015; Kügler et al, 2015b; Suh &amp; Bock, 2015) by using Enterprise Social Networks.
+I utilise the papers to derive effects on the organisation from the functionality of Enterprise Social Network software.
+As a starting point for the metric repository the literature on <strong>Data and Data Analytics</strong> along with other literature as described in section Research-Approach is utilised.
+The focus of this literature is to develop analysis approaches for social network data.
+A common approach is to conceptualise relationships via Social Network Analysis (Behrendt et al., 2014).</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>SNS</th>
+<th>ESN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User Behaviour</td>
+<td>Influenced by site norms</td>
+<td>Influenced by organisational policy</td>
+</tr>
+<tr>
+<td>Users</td>
+<td>Individuals</td>
+<td>Employees; use can be optional, encouraged, or mandated</td>
+</tr>
+<tr>
+<td>Design</td>
+<td>Controlled by a parent corporation, encourages interaction among individual users</td>
+<td>Controlled by stakeholders within the organisation, encourages interaction among individual, teams, and other units</td>
+</tr>
+<tr>
+<td>Audience</td>
+<td>Global or limited to friends</td>
+<td>Configured by user or organisational structure</td>
+</tr>
+<tr>
+<td>Goals for Use</td>
+<td>Hedonic</td>
+<td>Professional</td>
+</tr>
+</tbody>
+</table>
+<p><br>
+Both Social Network Sites and Enterprise Social Networks are social software (Bachle, 2006; Boyd, 2007), where content is created by its users (Richter, 2011).
+Therefore the results of research on Social Network Sites is applicable to Enterprise Social Networks, albeit Enterprise Social Networks are used in a professional way (Ellison et al., 2007), while Social Network Sites are used in a hedonic way (Richter, 2009; Richter, 2011).
+Due to this discrepancy and norms being different inside of an organisation than compared to outside of an organisation, 
+different contexts and environments must be cared for (Richter, 2009; Richter, 2011).
+That is why Ellison et al. (2015) point out key differences between Enterprise Social Networks and Social Network Sites,
+which are summarised in Table 1.</p>
+<p><!-- What components and goals has ESN? --></p>
+<h2 id="components-features-and-goals">Components, Features and Goals</h2>
+<p>Typical components of social software include webblogs, microblogs, wikis, groups, social bookmarking and instant messaging (Viol et al., 2016).
+According to Viol et al. (2016) and Razmerita et al. (2014) the relevant parts for Enterprise Social Networks are wikis for collaboration, document management, social networking and profile pages.
+Common goals of an Enterprise Social Network include self-presentation and social networking, exchange of information and performing of knowledge work (Riemer et al., 2015).
+Users have unique profiles and are active in the Enterprise Social Network on a daily basis (Riemer, 2015; Ellison, 2013).
+Web 2.0 principles such as the collective creation of content, usability and user interaction apply (Viol et al., 2016).</p>
+<p>Leonardi et al. (2013) provide a definition for Enterprise Social Networks:</p>
+<blockquote>
+<p>[An Enterprise Social Network is a] web based platform, that allows workers to
+  (1) communicate messages with specific co-workers or [...] broadcast messages [...];
+  (2) explicitly indicate or implicitly reveal particular co-workers as communication partners;
+  (3) post, edit, and sort text and files to themselves or others and;
+  (4) view messages, connections, text, and files [...] by anyone else [...] at any time [...].</p>
+</blockquote>
+<p>Distinct features of Enterprise Social Networks are pointed out by Leonardi et al. (2013).
+The communication between users is usually public and visible.
+It is straight-forward to publish content in news feeds or groups and
+published content is persisted and always accessible.
+Such content is associated with its author and can be discussed by other users (Treem et al., 2012).
+This results in an inherent instrumental knowledge i.e. &quot;<em>how to do something</em>&quot; and
+meta-knowledge \ie &quot;<em>who knows what</em>&quot; as depicted by Leonardi et al. (2013).</p>
+<p><!-- long list of motivation --></p>
+<h2 id="motivation-for-use">Motivation for Use</h2>
+<p>Enterprise Social Networks provide the users and organisations with a variety of functionality.
+They change how communication within an organisation takes place by
+facilitating user participation and interaction (Leonardi et al., 2013).</p>
+<p>A common theme is user generated content with emphasis on sharing ideas and knowledge (Boyd et al., 2007),
+which has been proposed by several authors (Mantymaki, 2016; Riemer, 2015; Zhang, 2010).
+This leads to the exchange of expertise (Steinfield et al., 2009)
+and ultimately supports the generation of new ideas, brainstorming and problem-solving (Riemer et al., 2012).
+Based on Kraut et al. (2002), Ellison et al. (2015) and DiMicco et al. (2009) suggest that such exchange of expertise can happen spontaneously in the course of user initiated discussions.</p>
+<p>The sharing of knowledge leads to a reduction of knowledge stickiness, which is the act of keeping knowledge to oneself to gain personal benefits (Leonardi et al., 2015).
+As mentioned before, knowledge is publicly available in an Enterprise Social Network and associated with its creators.
+It leads to open and democratic communication structures (McAfee et al., 2006).
+This makes the location of knowledge and experts visible and enables teams to communicate across boundaries (Riemer, 2015; Jarrahi, 2013).
+This is of special importance to virtual and distributed teams, who otherwise would have trouble identifying experts and locating knowledge (Ellison et al., 2015).
+In this regard Mantymaki et al. (2016) talk about Enterprise Social Networks fulfilling the information needs of an organisation.</p>
+<p>Another aspect is the relationship-building between co-workers.
+In providing personal information (Ellison et al., 2015) and encouraging relationships between users (Boyd et al., 2007),
+Enterprise Social Networks create ties and enable co-workers to help each other (Mantymaki et al., 2016).
+DiMicco et al. (2009) talk about <em>&quot;sense making&quot;</em> which describes the level of understanding between co-workers.
+By finding common ground between co-workers, Enterprise Social Networks are helping to increase this level of understanding (Ellison, 2007; Jarrahi, 2013).
+This enables employees to integrate into the workforce (Leidner et al., 2010) and build trusting relationships with each other (Ellison et al., 2015).</p>
+<p><!-- effects of ESN use --></p>
+<h2 id="effects-of-use">Effects of Use</h2>
+<p>The effects of Enterprise Social Network use for the organisation are improved knowledge sharing and transfer between users
+as well as increased meta-knowledge (Ellison, 2015; Leonardi, 2013).</p>
+<p>Users establish bonding relationships with co-workers and engage in heterogeneous relationships (Ellison, 2007; Boyd, 2007).
+They develop a sense of corporate citizenship (Steinfield et al., 2009) and
+thus feel more belonging towards the organisation.
+This relationship bonding strengthens existing ties and creates new social ties in the organisation (Steinfield et al., 2009),
+leading to an increased willingness to help and an improved employee performance (Riemer, 2015; Kuegler, 2015).
+Dispersed teams in distant locations are able to connect and exchange ideas by utilising Enterprise Social Networks according to Ellison et al. (2015).</p>
+<p>Fulk et al. (2013) say Enterprise Social Networks are superior compared to traditional knowledge management systems.
+A 20-25% productivity increase can be gained as mentioned by Mantymaki et al. (2016).
+A ROI of 365% can be achieved by using Enterprise Social Networks (Mantymaki et al., 2016) and
+an employee performance increase is stated by Kuegler et al. (2015).
+This is confirmed by Riemer et al. (2015), who state that active Enterprise Social Network use during project work is positively related to performance.
+All these benefits of Enterprise Social Networks give it a strategic role in the IT portfolio (Karoui et al., 2015).
+It should be noted that sustained use is necessary to gain these benefits (Mantymaki et al., 2016)
+and they are affected by organisational norms, policies and the organisational structure (Ellison, 2015; Zammuto, 2007).</p>
+<p><!-- What about Groups? --></p>
+<h2 id="groups">Groups</h2>
+<p>Enterprise Social Networks provide various features with regards to groups (Kietzmann et al., 2011).
+Different types of groups were identified by Muller et al. (2012).
+Groups can be either set up to be public or private and are usually created for users with a common interest or occupation.
+These kind of groups usually work together on a shared project or business function and try to achieve the same goal.
+They discuss specific topics and try to find new ideas related to the project.
+Other types of groups include technical support groups and recreational groups, devoted to activities unrelated to work.</p>
+<p><!-- Why measure performance? -->
+In general, groups are the centre for collaboration, cooperation and knowledge sharing in an organisation (Riemer et al., 2015).
+The benefits of Enterprise Social Networks are materialised by using and being active in groups (Bechmann, 2012; Nahapiet, 1998).
+Following this line of thought, I want to measure groups and identify groups, who take a leading role in these activities and in the organisation.
+Management can use the information on high performing groups to identity domain experts, disseminate knowledge to different groups and establish rewards for top performers.
+Future research can be conducted on what makes these groups so performant and consequently try to improve other groups.</p>
+<p>Groups can have different levels of activity and size,
+which is relevant for the calculation and interpretation of the metrics later on (Behrendt et al., 2014).
+The metrics have to be interpreted with the size of the group in mind.
+The features of a Enterprise Social Network as described by Leonardi et al. (2013) generate network data.
+This data can be used for an analysis of groups, that is looking to infer conclusions about a group&#39;s performance.
+Typical measures include the time and number of communicated messages and the communication partner.</p>
+
+
+      </div>
+
+    </div>
+  </body>
+</html>

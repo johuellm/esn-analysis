@@ -1,0 +1,380 @@
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <title>ESN Group Analysis Platform</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96472647-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            ESN Group Analysis Platform&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form id="form--group-search" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input id="input--group-search" type="text" min="1" class="form-control" placeholder="Group ID" required>
+            </div>
+            <button type="submit" class="btn btn-default">Lookup</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li >
+              <a href="../index.html">Home</a>
+            </li>
+            <li >
+              <a href="../group.html">Details</a>
+            </li>
+            <li  class="active" >
+              <a href="../wiki/index.html">Wiki</a>
+            </li>
+            <li >
+              <a href="../about.html">About</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+  <div class="card panel panel-default">
+    
+    <div class="panel-heading">
+      <button class="btn btn-default"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseExample"
+              aria-expanded="true"
+              aria-controls="collapseExample"
+      >
+          <span class="glyphicon glyphicon-menu-hamburger"></span> Menu
+      </button>
+    </div>
+
+    <div class="collapse in" id="collapseExample" aria-expanded="true">
+      <div id="overview-last-users" class="panel-body">
+        <div class="btn-group-vertical wiki-sidebar"  role="group">
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-globe"></span>
+            Graph Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="degree.html"
+             role="button"
+          >
+            Degree
+            
+          </a>
+          <a class="btn btn-default btn-block disabled"
+             href="closeness.html"
+             role="button"
+          >
+            Closeness
+            <span class="glyphicon glyphicon-triangle-left"></span>
+          </a>
+          <a class="btn btn-default btn-block"
+             href="betweenness.html"
+             role="button"
+          >
+            Betweenness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="eigenvector.html"
+             role="button"
+          >
+            Eigenvector
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="density.html"
+             role="button"
+          >
+            Density
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="clustering.html"
+             role="button"
+          >
+            Clustering
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="nodes_edges.html"
+             role="button"
+          >
+            Nodes &amp; Edges
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-user"></span>
+            ESN Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="messages_created.html"
+             role="button"
+          >
+            Messages Created
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_time.html"
+             role="button"
+          >
+            Avery Time First Reply
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_replies.html"
+             role="button"
+          >
+            Avery Replies per Thread
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reciprocity.html"
+             role="button"
+          >
+            Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_reciprocity.html"
+             role="button"
+          >
+            Thread Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reply_creation_ratio.html"
+             role="button"
+          >
+            Reply Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_creation_ratio.html"
+             role="button"
+          >
+            Thread Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="user_activity.html"
+             role="button"
+          >
+            User Activity over Time
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="group_activity.html"
+             role="button"
+          >
+            Group Activity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="passivity.html"
+             role="button"
+          >
+            Passivity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="registered_date.html"
+             role="button"
+          >
+            Registered Date
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-info-sign"></span>
+            Background
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="social_capital.html"
+             role="button"
+          >
+            Social Capital
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="esn.html"
+             role="button"
+          >
+            Enterprise Social Networks
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="sna.html"
+             role="button"
+          >
+            Social Network Analysis
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="research_meth.html"
+             role="button"
+          >
+            Research Methodology
+            
+          </a>    
+
+          <a class="btn btn-default btn-block"
+             href="limitations.html"
+             role="button"
+          >
+            Limitations
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="literature.html"
+             role="button"
+          >
+            Literature
+            
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'],]}
+  });
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/2.7-latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+    <div class="content-container content-container-wiki">
+
+      <div class="col-xs-12 col-sm-8 col-lg-10 text-justified">
+
+      <div id="loading-box" class="empty-state col-12 text-center">
+        <i class="fa fa-spinner fa-spin"></i>
+        <span>Loading</span>
+      </div>
+
+      
+
+<h1 id="closeness-centrality">Closeness Centrality</h1>
+<!-- Closeness Centrality -->
+<!-- Name Type Subtype Description -->
+
+<p>The <em>closeness centrality</em> measures the average shortest path, also known as the geodesic distance, through a network between two vertices (Newman, 2010).
+It was first published by Sabidussi (1966).
+Since the closeness is the opposite of the distance, the value of the average shortest path is inverted, to get the value for the closeness centrality.
+A higher value for the closeness centrality means that a vertex is closer to all other vertices (Scott, 2012) and quicker to interact with all others vertices (Wasserman et al., 1994).</p>
+<p>Because the closeness centrality measures the distance from one specific node to all others, it is of ego-centric scope.
+This metric was proposed by Smith et al. (2009), Hacker et al. (2015), Viol et al. (2016) and Berger et al. (2014).</p>
+<h2 id="calculation">Calculation</h2>
+<p>The calculation is based on Wasserman (1994).
+To calculate the closeness centrality, the number of edges between the two nodes $v_i \in V$ and $v_j \in V$ for the shortest path is defined as the $distance(v_i, v_j)$ -- this equates to the shortest path length or the geodesic distance.</p>
+<p>To get the closeness centrality $c$, the sum of all distances is calculated and inverted: 
+$$ c(v_i) = \left[\sum_{v_j \in V}distance(v_i, v_j)\right]^{-1}\quad\text{, where }v_j \neq v_i . $$</p>
+<p>For comparison of networks with different sizes, Wasserman (1994) as well as Freeman (1979) picked up the suggestion by Beauchamp (1965) to standardize the metric through multiplying with the network size $g$ minus one:
+$$ c^{&#39;}(v_i) = (g-1) * \left[\sum_{v_j \in V}distance(v_i, v_j)\right]^{-1}\quad\text{, where }v_j \neq v_i . $$</p>
+<p>Because the formula yields an infinite value for disconnected nodes, it is problematic.
+While Newman (2010) suggests to use the inverse distance instead of the distance,
+he acknowledges that this is rarely used in practice.
+Instead the formula variant from the igraph package is used, which states that &quot;if there is no path between vertex $v_i$ and $v_j$ then the total number of vertices is used in the formula instead of the path length&quot;<a href="http://igraph.org/r/doc/closeness.html" title="accessed 2016-10-25">^igc</a>.</p>
+<p>Therefore we define a new distance function as:
+$$ distance^{&#39;}(v_i, v_j) = \begin{cases}
+distance(v_i, v_j) &amp; \text{, if there is a path} \\
+g &amp; \text{, otherwise}.
+\end{cases} $$</p>
+<p>The final formula looks like this:
+$$c^{&#39;}(v_i) = (g-1) * \left[\sum_{v_j \in V}distance^{&#39;}(v_i, v_j)\right]^{-1}\quad\text{, where }v_j \neq v_i .$$</p>
+<h2 id="interpretation">Interpretation</h2>
+<p>The value can be interpreted in the context of Social Networks.
+Newman (2010) mentions that a user with high closeness centrality is able to quickly respond and interact with other users due to the short distance.
+Such a user can efficiently disseminate information through the network because of the short communication paths to others.
+This argument is confirmed by Berger et al. (2014), who state that users with high closeness centrality are able to spread information easily.
+Similar to the interpretation of degree centrality, Berger et al. (2014) further claim that a high closeness centrality is related to being a key user.
+Key users are knowledge hubs, meaning they contribute and help other users to solve their daily problems.
+They are able to diffuse innovative ideas quickly to other people.</p>
+<p>Smith et al. (2009) relate high closeness centrality to users, who regularly spawn new discussions and ideas as well as take part in other users&#39; threads.
+Contrary, a low closeness centrality is related to people, who tend to reply in other people threads only, but do not initiate discussions on their own.
+The notion of engagement is introduced by Hacker et al. (2015).
+On the one hand a high closeness centrality indicates high levels of continuous engagement by a user in the Enterprise Social Network,
+but on the other hand such a user is not very focused i.e. he does talk about multiple topics compared to being an expert in one topic.</p>
+<p>Hacker et al. (2015) draw connections to Viegas (2004), who researched that the closeness centrality can be related to frequency of posts.
+A high closeness centrality and degree centrality indicate a high post count, which is discussed in the metric <em>messages created</em>.
+Furthermore Hacker et al. (2015) links to Holtzblatt (2013) and their results on valuable themes of social platform experience.
+They claim a high engagement supports collaboration and facilitates cooperation with staff in other locations.
+It also strengthens social connection, expanding a user&#39;s network and tracking other people&#39;s activities.
+Since a high closeness centrality implies that you can easily communicate with all other users, both of these statements are reasonable to make. </p>
+<p>Viol et al. (2016) picks up the interpretation of continuous engagement in an Enterprise Social Network.
+A high closeness centrality indicates that a user is well connected within the network.
+They are always online and active and therefore can initiate and take part in multiple discussions.
+This is also means that they are not focused on one topic, but rather dispersed across a lot of discussions and threads (Viol, 2016), which fits to the interpretation in the other literature.</p>
+<!-- Interpretation/Dimension -->
+
+<p>Similar to the degree centrality: if multiple users exhibit a high closeness centrality, it leads to a dense and cohesive network.
+The short distance between all users results in strong ties between the users.
+Strong ties are a reason for Social Capital and the formation of effective norms and trust (Riemer, 2005).
+According to Coleman (1990) effective norms and trust among the users allow for successful collaboration.</p>
+<p>The interpretation that information can quickly be disseminated, fits to the effect of Social Capital described by Nahapiet et al. (1998).
+They argue that &quot;<em>Social Capital constitutes a valuable source of information benefits</em>&quot; (p. 252).
+It manifests itself in the distribution of information, making information readily available.
+Because of the established trust through strong ties, specifically the distribution of complex or sensitive information is positively influenced by Social Capital as noted by Riemer (2005) and Koka et al. (2002).
+Whereas the dissemination of arbitrary and small information is more positively influenced by weak ties and thus a low closeness centrality.</p>
+
+
+      </div>
+
+    </div>
+  </body>
+</html>

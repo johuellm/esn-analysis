@@ -1,0 +1,456 @@
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <title>ESN Group Analysis Platform</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96472647-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            ESN Group Analysis Platform&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form id="form--group-search" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input id="input--group-search" type="text" min="1" class="form-control" placeholder="Group ID" required>
+            </div>
+            <button type="submit" class="btn btn-default">Lookup</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li >
+              <a href="../index.html">Home</a>
+            </li>
+            <li >
+              <a href="../group.html">Details</a>
+            </li>
+            <li  class="active" >
+              <a href="../wiki/index.html">Wiki</a>
+            </li>
+            <li >
+              <a href="../about.html">About</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+  <div class="card panel panel-default">
+    
+    <div class="panel-heading">
+      <button class="btn btn-default"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseExample"
+              aria-expanded="true"
+              aria-controls="collapseExample"
+      >
+          <span class="glyphicon glyphicon-menu-hamburger"></span> Menu
+      </button>
+    </div>
+
+    <div class="collapse in" id="collapseExample" aria-expanded="true">
+      <div id="overview-last-users" class="panel-body">
+        <div class="btn-group-vertical wiki-sidebar"  role="group">
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-globe"></span>
+            Graph Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="degree.html"
+             role="button"
+          >
+            Degree
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="closeness.html"
+             role="button"
+          >
+            Closeness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="betweenness.html"
+             role="button"
+          >
+            Betweenness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="eigenvector.html"
+             role="button"
+          >
+            Eigenvector
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="density.html"
+             role="button"
+          >
+            Density
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="clustering.html"
+             role="button"
+          >
+            Clustering
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="nodes_edges.html"
+             role="button"
+          >
+            Nodes &amp; Edges
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-user"></span>
+            ESN Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="messages_created.html"
+             role="button"
+          >
+            Messages Created
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_time.html"
+             role="button"
+          >
+            Avery Time First Reply
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_replies.html"
+             role="button"
+          >
+            Avery Replies per Thread
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reciprocity.html"
+             role="button"
+          >
+            Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_reciprocity.html"
+             role="button"
+          >
+            Thread Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reply_creation_ratio.html"
+             role="button"
+          >
+            Reply Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_creation_ratio.html"
+             role="button"
+          >
+            Thread Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="user_activity.html"
+             role="button"
+          >
+            User Activity over Time
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="group_activity.html"
+             role="button"
+          >
+            Group Activity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="passivity.html"
+             role="button"
+          >
+            Passivity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="registered_date.html"
+             role="button"
+          >
+            Registered Date
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-info-sign"></span>
+            Background
+          </a>
+
+          <a class="btn btn-default btn-block disabled"
+             href="social_capital.html"
+             role="button"
+          >
+            Social Capital
+            <span class="glyphicon glyphicon-triangle-left"></span>
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="esn.html"
+             role="button"
+          >
+            Enterprise Social Networks
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="sna.html"
+             role="button"
+          >
+            Social Network Analysis
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="research_meth.html"
+             role="button"
+          >
+            Research Methodology
+            
+          </a>    
+
+          <a class="btn btn-default btn-block"
+             href="limitations.html"
+             role="button"
+          >
+            Limitations
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="literature.html"
+             role="button"
+          >
+            Literature
+            
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'],]}
+  });
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/2.7-latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+    <div class="content-container content-container-wiki">
+
+      <div class="col-xs-12 col-sm-8 col-lg-10 text-justified">
+
+      <div id="loading-box" class="empty-state col-12 text-center">
+        <i class="fa fa-spinner fa-spin"></i>
+        <span>Loading</span>
+      </div>
+
+      
+
+<h1 id="social-capital">Social Capital</h1>
+<p><!-- Introduction -->
+Riemer et al. (2005) and Adler et al. (2002) performed extensive research on Social Capital.
+It is based on primary works by Granovetter et al. (1973), Coleman et al. (1990) and Burt et al. (2001).
+This section summarises their research and puts it into the context of Enterprise Social Networks.</p>
+<p><!-- What is Social Capital -->
+The research on Social Capital is diverse and comprised of multiple theories and perspectives (Adler et al., 2002).
+In general Social Capital describes the value of social relationships in social networks depending on the structure of the network and an actor&#39;s position in the network (Riemer et al., 2005).
+Social Capital is an interdisciplinary topic with research in several domains such as social science, economics and psychology (Riemer et al., 2005).</p>
+<p>Baker et al. (1990) defines Social Capital as a &quot;<em>resource that actors derive from specific social structures and then use to pursue their interests</em>&quot;.
+A social structure is comprised of social relationships and how they are embedded into the structure of a social network.
+The value generated from Social Capital can be used to generate business value (Riemer et al., 2005).
+It can be utilised to compare actors based on their social relationships as opposed to comparing their skills and attributes.
+This is useful to assess situations in which a particular actor performs better than other actors, who have an equal set of skills and attributes (Riemer et al., 2005). </p>
+<p><!-- Motivation for Social Capital -->
+Because knowledge work benefits from social relationships, Social Capital is getting more important with the increase of knowledge work (Riemer et al., 2005).
+Especially virtual teams make strong use of software such as Enterprise Social Networks to maintain social relationships and thus Social Capital (Muller et al., 2012).
+Within such social networks they can cooperate with other actors and access resources, which would otherwise be unavailable to them.</p>
+<p><!-- Levels and Perspectives of Social Capital --></p>
+<h2 id="levels-and-perspectives">Levels and Perspectives</h2>
+<p>Actors in a network can be grouped together to form a collective actor (Riemer et al., 2005),
+which can be found on different levels within a network.</p>
+<p>As illustrated in Figure 1 on the lowest level are the individual users.
+Since individuals are atomar actors, they are not considered collective actors.
+However the next two levels are the group-level and the organisational-level.
+Both groups and organisations are collective actors,
+composed of actors from their respective lower level.
+Groups are composed of different individual actors and their relationships.
+Organisations are composed of multiple individuals and groups and their relationships.</p>
+<p><img src="assets/social_capital_levels.png" alt="The Different Levels of Social Capital" title="The Different Levels of Social Capital"></p>
+<p>Steinfield et al. (2009) state that Social Capital can be conceptualised at different levels.
+All levels can be analysed by using the same theoretical or methodological approach according to Borgatti et al. (1998).
+They consider &quot;<em>the substance of Putnam&#39;s and Burt&#39;s approaches to be separable from the unit of analysis</em>&quot; (p. 28).</p>
+<p>Thus the Social Capital of any collective actor can be analysed according to the two different perspectives proposed by Adler et al. (2002):
+  (1) the internal perspective and
+  (2) the external perspective.</p>
+<p>The (1) internal perspective of Social Capital is concerned with all structures within a collective actor (Riemer et al., 2005).
+Typically the internal perspective is used for analysing the social relationships between group members (Adler et al., 2002).
+Value is generated by cohesion and collaboration within the group (Adler et al., 2002).
+Collaboration is negatively affected by fragmentation and a long distance to other communication partners (Borgatti et al., 1998).
+As individuals are not considered collective actors, the internal perspective does not apply to them.</p>
+<p>Social Capital based on the (2) external perspective is concerned with all interactions between actors outside of the group (Coleman, 1990; Sandefur, 1998).
+It emphasises the value of direct and indirect social relationships with others.
+Tymon et al. (2003) claim that it is beneficial for knowledge work as it enables the generation of new ideas.
+The exposure to new ideas is further supported by heterogeneous relationships to external actors as mentioned by Borgatti et al. (1998).</p>
+<p>Basically, the internal perspective is about interactions, that happen within a collective actor and the external perspective is about interactions, that happen outside of the collective actor.
+As groups are collective actors, both perspectives are suited to analyse groups in a social network.</p>
+<p><!-- When analysing -->
+When analysing Social Capital it is important to take into account what perspective and level you choose as results may differ (Burt, 2000; Reagans, 2001).
+Interdependencies may exist \eg if many individuals in a group have high Social Capital, it is reasonable to assume, that the group is densely connected internally and therefore also has high Social Capital.
+There may be conflicting interdependencies \eg when an individual wants to gain power, it is in the individual&#39;s interest to be better connected than others (Blyler et al., 2003).</p>
+<p><!-- Theories about Network Structure --></p>
+<h2 id="theories-about-network-structure">Theories about Network Structure</h2>
+<p>Based on the two perspectives, two theories are proposed as to what constitutes Social Capital:
+The (1) &quot;<em>structural holes</em>&quot; theory was originally proposed by Granovetter et al. (1973) and Burt et al. (1992).
+It is based on &quot;weak ties&quot; and utilises the external perspective. 
+The (2) &quot;<em>closure</em>&quot; theory was originally proposed by Coleman et al. (1988) and Coleman et al. (1990).
+It is based on &quot;strong ties&quot; and utilises the internal perspective.
+The connection of the perspectives and the theories is illustrated in Figure 2.</p>
+<p><img src="assets/perspectives_theories.png" alt="Social Capital Perspectives and Theories" title="Social Capital Perspectives and Theories"></p>
+<p>As mentioned before, collective actors can be analysed with both perspectives.
+Therefore both theories can be applied to collective actors.
+However, to individual actors only the external perspective and the structural holes theory can be applied.</p>
+<h3 id="structural-holes-and-weak-ties">Structural Holes and Weak Ties</h3>
+<p>The structural holes theory is based on the external perspective.
+It focuses on the ego-network of an actor and his structural position.
+Two assumptions about the actor are made:
+  (1) an actor has a higher number of <em>diverse</em>, <em>weak</em> ties compared to other actors (Granovetter et al., 1973) and
+  (2) an actor has a <em>central position</em> in the network (Burt et al., 1993).</p>
+<p>Weak ties are relationships between actors, which are distant and loose \eg &quot;<em>some person you know</em>&quot;.
+The distance to other actors allows them to provide new impulses and non-redundant information (Adler et al., 2002).
+Thus an actor with many weak ties can derive value from novel information and ideas.</p>
+<p>The structural holes theory describes a central position in the network as a position, which connects parts of a network, that would otherwise be disconnected (Burt et al., 1993).
+By connecting different parts of a network, information flows through such a position.
+An actor in a central position can exert control over the flow of information and is called an information broker (Jansen et al., 2002).</p>
+<p>As actors derive value from their positions in the network, they try to get into better positions than their peers (Burt et al., 2001).
+Therefore the structural holes theory is of competitive nature as actors try to gain an advantageous position over others (Burt et al., 2001).</p>
+<p>The type of Social Capital, that the structural holes theory describes, is also called Bridging Social Capital (Putnam et al., 2000).</p>
+<h3 id="closure-and-strong-ties">Closure and Strong Ties</h3>
+<p>The closure theory is based on the internal perspective.
+It focuses on the network as a whole and its internal relationships.
+It is based on the relevance of strong ties and cohesive network structures (Coleman et al., 1988).
+Strong ties are created by repeated reciprocal interactions between actors (Steinfield et al., 2009).
+High cohesion stems from strong ties and close knit relationships within the social network or parts of it (Coleman et al., 1988).
+This results in a high connectivity between all actors within the network.
+The network itself derives value, if it is closely connected \eg enabling effective collaboration (Riemer et al., 2005).
+Thus the closure theory is of cooperative nature as the network as whole gains an advantage.</p>
+<p>The type of Social Capital, that the closure theory describes, is also called Bonding Social Capital (Putnam et al., 2000).</p>
+<h3 id="complementary-theories">Complementary Theories</h3>
+<p><!--
+The differences between the theories are summarised in figure \ref{fig:comparison_table_theories}.
+-->
+Although the theories provide contrasting propositions, they are in fact complementary.
+This is explained by the fact that the two theories are applied to different perspectives of Social Capital.
+The structural holes theory is applied to the external perspective, while the strong ties theory is applied to the internal perspective.</p>
+<p><img src="assets/social_capital_max_performance.png" alt="Maximum Group Performance" title="Maximum Group Performance"></p>
+<p>Initial work on the complementary character of the two theories was performed by Burt et al. (2000).
+He states, that if combined correctly, the two theories lead to maximum group performance in an organisation.
+The idea is that a collective actor should try to maximise Bridging and Bonding Social Capital as shown in Figure 3.
+The bridging Social Capital is maximised based on the structural holes theory:
+A high number of weak ties are maintained and used as information resources for gathering non-redundant information and ideas.
+The bonding Social Capital is maximised based on the closure theory:
+A cohesive group structure is to be facilitated for effective collaboration and cooperation.</p>
+<p>After its maximisation of Social Capital, a group can benefit from several effects.
+These effects are detailed in the next section.</p>
+<h2 id="effects">Effects</h2>
+<p>While the general idea of the two theories is outlined above, I discuss some of the positive and negative effects in detail.
+Riemer et al. (2005), Sandefur et al. (1998) and Adler et al. (2002) split the effects into categories regarding:
+  (1) information, influence and control and
+  (2) collaboration and cooperation (solidarity).</p>
+<h3 id="positive-effects">Positive Effects</h3>
+<p><!-- Information -->
+(1) Steinfield et al. (2009) links Social Capital to knowledge management.
+On the one hand the weak ties make novel information and ideas accessible, on the other hand strong ties are suited to debate complex topics and to engage in prolonged discussions (Riemer et al., 2005).
+Scott et al. (2012) mentions that information is disseminated more quickly via strong ties than weak ties.
+According to Hansen et al. (1999) weak ties are easy to maintain and therefore a meaningful resource for information.</p>
+<p><!-- Power -->
+Based on the structural holes theory, actors in a brokering position can get a lot of influence (Coleman et al., 1990).
+They are able to access all the information that passes by them and they can decide which information to pass on or withhold (Burt, 2000; Riemer, 2005).
+This power benefits individuals, who try to use it for their indivdual career progression (Seibert et al., 2001).
+However such individual influence is not desired by the network as a whole,
+because it can negatively affect the organisation&#39;s Social Capital.</p>
+<p><!-- Collaboration -->
+(2) Strong ties and cohesive network structures build norms, reputation and trust (Adler, 2002; Coleman, 1990) based on the principle of reputation and sanction (Burt, 2000; Coleman, 1990; Riemer, 2005).
+This enables effective cooperation (Riemer et al., 2005) and
+the solution of complex problems in an collaborative effort (Krackhardt, 1992 and Riemer, 2005).
+The norms and trust result in a common ground and shared understanding (Clark et al., 1991), which is required to perform knowledge work according to Nahapiet et al. (1998).
+Putnam et al. (1995) states that shared norms and trust can lead to societies and subcultures in an organisation, which have positive influence on the organisation&#39;s Social Capital.
+Because users can identify themselves with their respective social network (Watson et al., 2002), they are motivated and show an increased commitment to their organisation (Scott et al., 2012).
+This motivation is linked by Singh et al. (2011) to Social Capital and project success as strongly tied groups sustain solidarity for working together.</p>
+<h3 id="negative-effects">Negative Effects</h3>
+<p>(1) Individuals may exploit their broker position and manipulate information for their own goals (Sandefur et al., 1998).
+This gives them power over the information flow and can result in a disturbed information flow in the organisation.</p>
+<p>(2) The establishment of norms and policies can lead to the creation of exclusive clubs or subcultures,
+which do not share information to the outside (Portes et al., 1998).
+Such subcultures can oppose the management direction of an organisation in its views and norms according to the organisation culture theory (Hatch et al., 2012).
+For new employees it can be difficult to enter such closely knit groups,
+and individual freedom may be restricted by norms and policies (Jansen et al., 2002).</p>
+
+
+      </div>
+
+    </div>
+  </body>
+</html>

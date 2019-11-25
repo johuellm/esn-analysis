@@ -1,0 +1,368 @@
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <title>ESN Group Analysis Platform</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96472647-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            ESN Group Analysis Platform&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form id="form--group-search" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input id="input--group-search" type="text" min="1" class="form-control" placeholder="Group ID" required>
+            </div>
+            <button type="submit" class="btn btn-default">Lookup</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li >
+              <a href="../index.html">Home</a>
+            </li>
+            <li >
+              <a href="../group.html">Details</a>
+            </li>
+            <li  class="active" >
+              <a href="../wiki/index.html">Wiki</a>
+            </li>
+            <li >
+              <a href="../about.html">About</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+  <div class="card panel panel-default">
+    
+    <div class="panel-heading">
+      <button class="btn btn-default"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseExample"
+              aria-expanded="true"
+              aria-controls="collapseExample"
+      >
+          <span class="glyphicon glyphicon-menu-hamburger"></span> Menu
+      </button>
+    </div>
+
+    <div class="collapse in" id="collapseExample" aria-expanded="true">
+      <div id="overview-last-users" class="panel-body">
+        <div class="btn-group-vertical wiki-sidebar"  role="group">
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-globe"></span>
+            Graph Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="degree.html"
+             role="button"
+          >
+            Degree
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="closeness.html"
+             role="button"
+          >
+            Closeness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="betweenness.html"
+             role="button"
+          >
+            Betweenness
+            
+          </a>
+          <a class="btn btn-default btn-block disabled"
+             href="eigenvector.html"
+             role="button"
+          >
+            Eigenvector
+            <span class="glyphicon glyphicon-triangle-left"></span>
+          </a>
+          <a class="btn btn-default btn-block"
+             href="density.html"
+             role="button"
+          >
+            Density
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="clustering.html"
+             role="button"
+          >
+            Clustering
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="nodes_edges.html"
+             role="button"
+          >
+            Nodes &amp; Edges
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-user"></span>
+            ESN Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="messages_created.html"
+             role="button"
+          >
+            Messages Created
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_time.html"
+             role="button"
+          >
+            Avery Time First Reply
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_replies.html"
+             role="button"
+          >
+            Avery Replies per Thread
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reciprocity.html"
+             role="button"
+          >
+            Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_reciprocity.html"
+             role="button"
+          >
+            Thread Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reply_creation_ratio.html"
+             role="button"
+          >
+            Reply Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_creation_ratio.html"
+             role="button"
+          >
+            Thread Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="user_activity.html"
+             role="button"
+          >
+            User Activity over Time
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="group_activity.html"
+             role="button"
+          >
+            Group Activity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="passivity.html"
+             role="button"
+          >
+            Passivity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="registered_date.html"
+             role="button"
+          >
+            Registered Date
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-info-sign"></span>
+            Background
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="social_capital.html"
+             role="button"
+          >
+            Social Capital
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="esn.html"
+             role="button"
+          >
+            Enterprise Social Networks
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="sna.html"
+             role="button"
+          >
+            Social Network Analysis
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="research_meth.html"
+             role="button"
+          >
+            Research Methodology
+            
+          </a>    
+
+          <a class="btn btn-default btn-block"
+             href="limitations.html"
+             role="button"
+          >
+            Limitations
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="literature.html"
+             role="button"
+          >
+            Literature
+            
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'],]}
+  });
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/2.7-latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+    <div class="content-container content-container-wiki">
+
+      <div class="col-xs-12 col-sm-8 col-lg-10 text-justified">
+
+      <div id="loading-box" class="empty-state col-12 text-center">
+        <i class="fa fa-spinner fa-spin"></i>
+        <span>Loading</span>
+      </div>
+
+      
+
+<h1 id="eigenvector-centrality">Eigenvector Centrality</h1>
+<p>The idea of the <em>eigenvector centrality</em> is to not only look at the number of neighbours a node has,
+but to also look at the importance of the node&#39;s neighbours.
+Therefore, a node has a high eigenvector centrality if it either has a high number of neighbours,
+or a few, but important neighbours.</p>
+<p>Because the eigenvector centrality is calculated for a single node, it is of ego-centric scope.
+The metric was proposed by Smith et al. (2009), Berger et al. (2014) and discussed in Wasserman et al. (1994).</p>
+<h2 id="calculation">Calculation</h2>
+<p><!-- Calculation --> 
+The calculation is based on Bonacich (1987) and explained by Newman (2010).
+It makes use of the adjacency matrix $A$.</p>
+<p><!-- rework -->
+Let $x(0)$ be the initial guess for the vector of centralities.
+Because it is unknown which node may be important, we assume an arbitrary value for the centralities.
+This value has to be equal for all elements in the vector.
+A common approach is to set all elements in $x(0)$ to 1.</p>
+<p>Now the vector is multiplied with the adjacency matrix $A$ to calculate the update value $x(1)$:
+$$ x(1) = A * x(0). $$</p>
+<p>Multiplying with the adjacency matrix assigns each element in the centrality vector the sum of the values of its neighbours.
+This can be repeated any number of times, thus we take the matrix $A$ to the power of $t$.
+$$ x(t) = A^t * x(0). $$</p>
+<p>To get a final value, we let $t$ approach infinity.
+For this we write $x(0)$ as a linear combination of the eigenvectors according to Newman (2010):
+$$ x(t) = A^t \sum_i c_i v_i = \sum_i c_i K^t_i v_i = 
+   K^t_1 \sum_i c_i \left[\frac{K_i}{K_1}\right]^t v_i. $$</p>
+<p>He describes it as follows:
+&quot;$K_i$ are the eigenvalues of $A$, and $K_j$ is the largest of them.
+Since $K_i/K_j$ &lt; 1 for all $i \neq 1$,
+all terms in the sum decay exponentially as $t$ becomes large,
+and hence in the limit $t \rightarrow \infty$ we get
+$x(t) \rightarrow c_j K^t_i v_j$.
+In other words, the limiting vector of centralities is proportional to the leading eigenvector of the adjacency matrix.
+Equivalently we could say that the centrality $x$ satisfies the formula&quot; (Newman, 2010):
+$$ Ax = K_jx, $$</p>
+<p>which is the eigenvector centrality first proposed by Bonacich (1987).
+Newman (2010) mentions that the centrality $x_i$ of the node $v_i$ is proportional to the sum of the centralities of $x_i$&#39;s neighbours.</p>
+<p>This means that the eigenvector centrality can be of a high value, because of the node&#39;s neighbours importance or the node&#39;s own importance.
+Therefore final formula looks like:
+$$ x_i = K^{-1}_j \sum{A_{ij}x_j}. $$</p>
+<p>A visual explanation of the calculation was created by Dan Ryan<a href="http://djjr-courses.wikidot.com/soc180:eigenvector-centrality" title="accessed 2017-01-13">^dr</a>.</p>
+<h1 id="interpretation">Interpretation</h1>
+<p><!-- Interpretation/Dimension -->
+Smith et al. (2009) claim the that eigenvector centrality is interpreted similar to the betweenness centrality.
+Users that form relationships with important neighbours, become relevant themselves (Newman, 2010).
+Due to their social relationships they fill a structural hole in the network leading to Bridging Social Capital.
+The neighbours pass information along a user with high eigenvector centrality.
+Therefore, such a user sees a lot of information and can disseminate the information to more users.
+Berger et al. 2014 identify this as a characteristic of key users, who contribute the most to the network.
+A low eigenvector centrality implies that a user is not well connected with other users.
+Thus, he is not in a position, where he receives a lot of information and does not establish Bridging Social Capital.</p>
+
+
+      </div>
+
+    </div>
+  </body>
+</html>

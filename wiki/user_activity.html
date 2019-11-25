@@ -1,0 +1,368 @@
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <title>ESN Group Analysis Platform</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96472647-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            ESN Group Analysis Platform&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form id="form--group-search" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input id="input--group-search" type="text" min="1" class="form-control" placeholder="Group ID" required>
+            </div>
+            <button type="submit" class="btn btn-default">Lookup</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li >
+              <a href="../index.html">Home</a>
+            </li>
+            <li >
+              <a href="../group.html">Details</a>
+            </li>
+            <li  class="active" >
+              <a href="../wiki/index.html">Wiki</a>
+            </li>
+            <li >
+              <a href="../about.html">About</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+  <div class="card panel panel-default">
+    
+    <div class="panel-heading">
+      <button class="btn btn-default"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseExample"
+              aria-expanded="true"
+              aria-controls="collapseExample"
+      >
+          <span class="glyphicon glyphicon-menu-hamburger"></span> Menu
+      </button>
+    </div>
+
+    <div class="collapse in" id="collapseExample" aria-expanded="true">
+      <div id="overview-last-users" class="panel-body">
+        <div class="btn-group-vertical wiki-sidebar"  role="group">
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-globe"></span>
+            Graph Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="degree.html"
+             role="button"
+          >
+            Degree
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="closeness.html"
+             role="button"
+          >
+            Closeness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="betweenness.html"
+             role="button"
+          >
+            Betweenness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="eigenvector.html"
+             role="button"
+          >
+            Eigenvector
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="density.html"
+             role="button"
+          >
+            Density
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="clustering.html"
+             role="button"
+          >
+            Clustering
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="nodes_edges.html"
+             role="button"
+          >
+            Nodes &amp; Edges
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-user"></span>
+            ESN Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="messages_created.html"
+             role="button"
+          >
+            Messages Created
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_time.html"
+             role="button"
+          >
+            Avery Time First Reply
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_replies.html"
+             role="button"
+          >
+            Avery Replies per Thread
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reciprocity.html"
+             role="button"
+          >
+            Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_reciprocity.html"
+             role="button"
+          >
+            Thread Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reply_creation_ratio.html"
+             role="button"
+          >
+            Reply Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_creation_ratio.html"
+             role="button"
+          >
+            Thread Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block disabled"
+             href="user_activity.html"
+             role="button"
+          >
+            User Activity over Time
+            <span class="glyphicon glyphicon-triangle-left"></span>
+          </a>
+          <a class="btn btn-default btn-block"
+             href="group_activity.html"
+             role="button"
+          >
+            Group Activity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="passivity.html"
+             role="button"
+          >
+            Passivity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="registered_date.html"
+             role="button"
+          >
+            Registered Date
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-info-sign"></span>
+            Background
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="social_capital.html"
+             role="button"
+          >
+            Social Capital
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="esn.html"
+             role="button"
+          >
+            Enterprise Social Networks
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="sna.html"
+             role="button"
+          >
+            Social Network Analysis
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="research_meth.html"
+             role="button"
+          >
+            Research Methodology
+            
+          </a>    
+
+          <a class="btn btn-default btn-block"
+             href="limitations.html"
+             role="button"
+          >
+            Limitations
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="literature.html"
+             role="button"
+          >
+            Literature
+            
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'],]}
+  });
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/2.7-latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+    <div class="content-container content-container-wiki">
+
+      <div class="col-xs-12 col-sm-8 col-lg-10 text-justified">
+
+      <div id="loading-box" class="empty-state col-12 text-center">
+        <i class="fa fa-spinner fa-spin"></i>
+        <span>Loading</span>
+      </div>
+
+      
+
+<h4 id="user-activity-over-time">User Activity over Time</h4>
+<p><!-- Number Name Type Description Scope Literature -->
+With the metric temporal concentration of creating messages, Hacker et al. (2015) and Viol et al. (2016)
+propose the idea to look at when messages are created and how the <em>user activity</em> changes <em>over time</em>.</p>
+<p>Angeletou et al. (2011) describe a similar metric called the <em>churn rate</em>, which is the loss of active users over time.
+I adopt the former definition as it is a good indicator for a user&#39;s activity.
+If the activity reaches 0, it can be concluded that this user is lost, which fits the latter metric.</p>
+<p>The activity can be measured for single users and therefore is of ego-centric scope.
+An average can be calculated for the network and be interpreted in a global scope.</p>
+<p>For the calculation of the user activity over time $ua$, the timestamps of the messages are aggregated on per-month basis.
+The term &quot;YYYYMM&quot; means the year and month of the given date.
+The result is a set of key-value pairs, where the key is the month and the value is the count of posts for that month.</p>
+<pre>
+1. select all messages from a given user
+2. group the messages by date in the form of "YYYYMM"
+3. ua := count the number of messages per month
+</pre>
+
+<p><!-- Interpretation/Dimension -->
+Viol et al. (2016) state that a high and continuous level of engagement characterises a <em>power user</em>.
+They contribute actively and are well connected within the network.
+Due to their high activity, they have a short response time and react quickly to questions and new ideas.
+As they are well connected, they have a high visibility and can influence the opinions of the network.
+Holtzblatt et al. (2013) call this type of users <em>active contributors</em>.</p>
+<p>The users are well connected within the network with a diverse set of other users.
+It can be assumed that such a user has strong relationships with a subset of these other users.
+Since it is difficult to maintain strong relationships, it can also be assumed that such a user
+has acquired weak relationships.
+In this sense the user is associated with the creation of Bridging and Bonding Social Capital for the network.
+The user&#39;s weak ties provide him with new information on a regular basis
+while the user can actively engage and collaborate with his strongly tied contacts.</p>
+<p>A low activity can indicate a <em>niche expert</em>, who is only active in his group
+or an <em>information seeker</em>.
+The latter type of user tends to ask questions and passively consume information,
+but the user is lacking interactions with other users.
+Therefore the user is not well connected in the network.
+However, the former type can be well connected to other people of his topical interest.
+Such a user possesses strong relationships with his peers and through that is thought to establish Bonding Social Capital.</p>
+<p>Berger et al. (2014) claim that a high user activity is a strong indicator of a healthy community.
+This is confirmed by Angeletou et al. (2011), who call it <em>community popularity</em>.
+It characterises a network, in which users engage with high intensity and motivate others users to contribute.
+If the activity in the network declines, it poses a serious threat to the health of the network
+as a whole.
+Therefore Angeletou et al. (2011) recommend community managers to act in case the activity drops.</p>
+<p>Hacker et al. (2015) note that a high temporal concentration of activity indicates low engagement.
+Instead it is preferable to have continuous activity over time, leading to consistent engagement with the Enterprise Social Network.
+Hacker et al. (2015) state that this indicates a brokering position in a network according to the structural holes theory.
+Thus, it measures Bridging Social Capital.</p>
+<p>Due to the measurement of both Bonding and Bridging Social Capital, this metric is relevant for finding the optimum performance of a group (Burt et al., 2001).
+It should be noted that <em>power users</em> are rarely found in a social network and thus other types of users prevail (Viol et al., 2016).</p>
+
+
+      </div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,463 @@
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <title>ESN Group Analysis Platform</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96472647-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            ESN Group Analysis Platform&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form id="form--group-search" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input id="input--group-search" type="text" min="1" class="form-control" placeholder="Group ID" required>
+            </div>
+            <button type="submit" class="btn btn-default">Lookup</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li >
+              <a href="../index.html">Home</a>
+            </li>
+            <li >
+              <a href="../group.html">Details</a>
+            </li>
+            <li  class="active" >
+              <a href="../wiki/index.html">Wiki</a>
+            </li>
+            <li >
+              <a href="../about.html">About</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+  <div class="card panel panel-default">
+    
+    <div class="panel-heading">
+      <button class="btn btn-default"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseExample"
+              aria-expanded="true"
+              aria-controls="collapseExample"
+      >
+          <span class="glyphicon glyphicon-menu-hamburger"></span> Menu
+      </button>
+    </div>
+
+    <div class="collapse in" id="collapseExample" aria-expanded="true">
+      <div id="overview-last-users" class="panel-body">
+        <div class="btn-group-vertical wiki-sidebar"  role="group">
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-globe"></span>
+            Graph Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="degree.html"
+             role="button"
+          >
+            Degree
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="closeness.html"
+             role="button"
+          >
+            Closeness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="betweenness.html"
+             role="button"
+          >
+            Betweenness
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="eigenvector.html"
+             role="button"
+          >
+            Eigenvector
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="density.html"
+             role="button"
+          >
+            Density
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="clustering.html"
+             role="button"
+          >
+            Clustering
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="nodes_edges.html"
+             role="button"
+          >
+            Nodes &amp; Edges
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-user"></span>
+            ESN Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="messages_created.html"
+             role="button"
+          >
+            Messages Created
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_time.html"
+             role="button"
+          >
+            Avery Time First Reply
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_replies.html"
+             role="button"
+          >
+            Avery Replies per Thread
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reciprocity.html"
+             role="button"
+          >
+            Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_reciprocity.html"
+             role="button"
+          >
+            Thread Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reply_creation_ratio.html"
+             role="button"
+          >
+            Reply Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_creation_ratio.html"
+             role="button"
+          >
+            Thread Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="user_activity.html"
+             role="button"
+          >
+            User Activity over Time
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="group_activity.html"
+             role="button"
+          >
+            Group Activity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="passivity.html"
+             role="button"
+          >
+            Passivity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="registered_date.html"
+             role="button"
+          >
+            Registered Date
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-info-sign"></span>
+            Background
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="social_capital.html"
+             role="button"
+          >
+            Social Capital
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="esn.html"
+             role="button"
+          >
+            Enterprise Social Networks
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="sna.html"
+             role="button"
+          >
+            Social Network Analysis
+            
+          </a>
+
+          <a class="btn btn-default btn-block disabled"
+             href="research_meth.html"
+             role="button"
+          >
+            Research Methodology
+            <span class="glyphicon glyphicon-triangle-left"></span>
+          </a>    
+
+          <a class="btn btn-default btn-block"
+             href="limitations.html"
+             role="button"
+          >
+            Limitations
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="literature.html"
+             role="button"
+          >
+            Literature
+            
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'],]}
+  });
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/2.7-latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+    <div class="content-container content-container-wiki">
+
+      <div class="col-xs-12 col-sm-8 col-lg-10 text-justified">
+
+      <div id="loading-box" class="empty-state col-12 text-center">
+        <i class="fa fa-spinner fa-spin"></i>
+        <span>Loading</span>
+      </div>
+
+      
+
+<h1 id="research-methodology">Research Methodology</h1>
+<p>I want to measure group metrics in the context of Enterprise Social Networks and interpret it against the theoretical underpinnings.
+For this cause Swoop provided me with a Yammer data set.</p>
+<p>In the following I describe the organisation Swoop and their needs and I describe the Enterprise Social Network software Yammer,
+which is the source of the data.
+Specifically I look into the features of Yammer and how the structure of the data set looks like.
+In a next step I explain my research approach for creating the metric repository and
+provide an overview on how I propose to measure the identified metrics for groups.</p>
+<h2 id="swoop">Swoop</h2>
+<p>Swoop is an Australian organisation based in Sydney,
+founded by Cai and Mariannae Kjaer and Dr Laurence Lock Lee in the year 2014.
+With a team of ten people they are working to help people become better collaborators.</p>
+<p>Swoop provides a unique platform for Social Network Analytics that gives individuals, teams, communities and executives insights into how they work together.
+It is the leading Social Network Analysis platform and presents a diverse set of valuable social network visualisation tools.</p>
+<p>As an organisation Swoop passionately believes in the power of collaboration and people networks to get work done.
+By analysing data from a variety of sources they provide employees and management with insights to make informed and evidence-based decisions about collaboration and the health of social networks.</p>
+<p>Their product is the result of more than 10 years of consulting experience in mapping organisational networks.
+Based on more than 100 projects the founders have identified the most valuable metrics that help organisations drive collaborative business performance.</p>
+<p>The targeted market is global and attracts a rapidly growing customer base in the US, Europe and Australia.
+Global top customers of Swoop include but are not limited to:
+Yum! Brands, the owner of KFC, which is linking disparate employees across their many outlets by using Swoop&#39;s platform.
+Telstra, with more than 40,000 employees, is among the top five companies listed on the Australian Stock Exchange.</p>
+<p>To gain a better understanding of the networks usage and to identify highly performing users,
+Swoop&#39;s platform evaluates data in five levels:</p>
+<p>(1) Enterprise -- uses data from the entire network,
+(2) Groups -- uses data from groups,
+(3) Topics -- uses data from one or multiple topics,
+(4) Business Unit -- uses data from a business unit and
+(5) Personal -- uses data from an individual user.</p>
+<p>Based on the used data, Swoop calculates different metrics for each level and the individuals from the particular level.
+The metrics are visualised in an online frontend for users to see.
+The visualisation includes the number of interactions that have taken place on the given level, e.g. the number of posts, replies or likes,
+and the network activity, e.g. activity per user, response rate, or the ratio of public/private messages.
+Typical visualisation of these metrics includes tables and graphs.
+Except for the personal level, the platform identifies key players.</p>
+<p>Currently, Swoop wants to add metrics on the enterpise and group level.
+Swoop&#39;s and my goal is to identify key groups based on metrics from the latest scientifc publications.
+These key groups and their metrics are to be visualised in a web frontend using Swoop&#39;s technology stack.
+The data for the analysis is sourced from the Enterprise Social Network Yammer,
+which is used by Swoop&#39;s customers[^swoop3].</p>
+<p><a href="http://www.swoopanalytics.com/">http://www.swoopanalytics.com/</a></p>
+<h2 id="yammer">Yammer</h2>
+<!-- 3.3 What is Yammer? -->
+
+<p>Yammer is an enterprise social networking service used within organisations
+as part of Microsoft&#39;s Office365 suite.
+The company Yammer was founded in 2008 by David Snacks and acquired by Microsoft in 2012.
+More than 70% of Fortune 500 corporations employ the Yammer platform in their organisation.
+According to Gartner, Microsoft is the leading vendor of 2015 for social sotware in the workplace with this product[^gart].
+The platform is accessed via webinterface and the domain of the user&#39;s email is used to bind one to the community.
+For example the email &quot;test@uni-sydney.edu&quot; would be assigned to the &quot;uni-sydney.edu&quot; community as the communities are based on domains.</p>
+<p>Yammer is used to connect employees across an organisation.
+The focus is on the discussion of ideas, sharing of updates, and crowdsourcing of answers from coworkers around the globe.
+&quot;<em>Yammer gives your team a faster, smarter way to connect and collaborate across your company</em>&quot; according to Microsoft&#39;s product page.
+In general, the goal is to share knowledge across the organisation while integrating well with other Office365 products.</p>
+<p>The functionality of Yammer includes a public timeline in the domain community,
+the opportunity to create public and private groups as well as
+to create threads and initiate discussions in domains or groups.
+Users reply to threads, react on likes and mentions and can vote in polls.
+Private instant messaging and sharing documents with other users is possible.</p>
+<p><a href="https://blogs.office.com/2015/10/28/gartner-recognizes-microsoft-as-a-leader-in-the-2015-magic-quadrant-for-social-software-in-the-workplace-for-seven-years-running/">https://blogs.office.com/2015/10/28/gartner-recognizes-microsoft-as-a-leader-in-the-2015-magic-quadrant-for-social-software-in-the-workplace-for-seven-years-running/</a><br><a href="https://products.office.com/en-us/yammer/yammer-overview">https://products.office.com/en-us/yammer/yammer-overview</a></p>
+<h2 id="data-structure">Data Structure</h2>
+<!-- 3.4 Data Structure (What does it look like? Where does it come from? What format?) -->
+
+<p>All user actions are persisted in the Yammer backend.
+Swoop retrieves this data via Yammer&#39;s application programming interface and stores it in their own database.
+The part of the database, which is relevant for me is depicted in Figure 1.</p>
+<p><img src="assets/swoop_data_structure.png" alt="Swoop&#39;s Data Structure" title="Swoop&#39;s Data Structure"></p>
+<p>The <em>Node</em> entity represents a user in the network and it has 7 relevant attributes, that I use in my analysis.
+The attribute <code>id</code> is a numerical primary key, the attributes <code>name</code>, <code>email</code> and <code>department</code> are of type text and describe the user.
+<code>effectivedatesql</code> is the creation date of the user account.
+<code>state</code> is the current state of the account and can have on of the following values: <code>soft_delete</code>, <code>active</code>, <code>external</code>.
+Based on the state the user can either be an active member of the community, an external user, that has access to the network or a user with a deleted account.
+If the account is deleted, the attribute <code>deleteddatesql</code> contains the date of the deletion.</p>
+<p>Users in the social network can interact via five classes of communication with each other.
+All interactions are described by the entity <em>Relationship</em>.
+Each interaction is given a unique primary key called <code>id</code>.</p>
+<p>All interactions are part of a particular thread, identified by the attribute <code>threadid</code>.
+The class of the interaction is stored in the attribute <code>class</code> and can have one of five values: <code>Reply</code>, <code>Like</code>, <code>Post</code>, <code>Notification</code> or <code>Mention</code>.
+A <code>Post</code> is the first message of a thread and a <code>Reply</code> is a response to a <code>Post</code> i.e. the second, third or later message in a thread.
+<code>Notification</code> and <code>Mention</code> interactions are always part of a <code>Post</code> or <code>Reply</code>.
+They are used to notify other users of the particular message.
+A <code>Like</code> can be given to any message as a form of acknowledgement without actually creating a textual message.
+While an interaction is identified by the <code>id</code> attribute, the message is identified by <code>messageìd</code>.ite
+This allows it, to attach <code>Notification</code> and <code>Mention</code> interactions to a message, but store them as separate interactions in the database.
+It should be noted, that while messages can contain multiple interactions of class <code>Notification</code> and <code>Mention</code>, they can only have one of either <code>Reply</code> or <code>Post</code> interaction.</p>
+<p>The <code>source</code> attribute identifies the source <code>Node</code> entity, which authored an interaction.
+The <code>target</code> attribute identifies the target <code>Node</code> entity, to which the interaction is directed.</p>
+<p><code>effctivedatesql</code> is the creation date of the interaction and <code>privacy</code> describes the publicy of an interaction, which can be of value <code>Public</code> or <code>Private</code>.
+The <code>groupid</code> attribute identifies the group in which the interaction took place and thus is important for the group analysis.</p>
+<p>The different classes used in Swoop&#39;s date structure can be found in the literature.
+Viol et al. (2016) distinguish classes of relationships, e.g. posts and likes, into information seeking, information sending and info receiving types of content.</p>
+<p>Swoop provides anonymised data, that means all attributes related to message content or personal user information are left blank.
+For reasons of relevancy and visibility in the Figure 1 the following attributes were left out:</p>
+<ul>
+<li>for Relationship: isreciprocal, relationshipid, updatetime</li>
+<li>for Node: image, effectivedate, updatetime, deleteddate, departmentid</li>
+</ul>
+<p>It is possible to discover distinct behavioural dimensions without having to evaluate message content (Viol et al., 2016).
+While the metrics in the metric repository in section metric-repository take into account metrics based on message content, they cannot be considered in the prototype due to lack of data.</p>
+<h2 id="research-approach">Research Approach</h2>
+<p>My aim is to create a reusable metric repository containing all metrics, that have been proposed in the literature until the end of 2016.
+This metric repository includes the interpretation of each metric and its calculation schema.
+Therefore, it can be used as a resource for developing software systems that analyse the Social Capital of Enterprise Social Networks.
+Based on the metric repository I build a prototypical web platform, that presents group metrics from Enterprise Social Network data.</p>
+<p>Riemer and colleagues published articles on this topic, which I use as a starting point for the collection of metrics.
+I look at their publications and the publications of their co-authors with the latest papers being released in 2016.
+Starting from these papers I perform a backwards search to identify further literature on the topic of Enterprise Social Networks and their metrics.
+The main sources that I use for the metric repository, are Smith et al. (2009), Freeman et al. (1977), Hacker et al. (2015), Viol et al. (2016), Berger et al. (2014), Wasserman et al. (1994), Scott et al. (2012), Newman et al. (2010) and Angeletou et al. (2011).
+If required, additional background information is retrieved from secondary sources. </p>
+<p>Having identified the metrics, I discuss their possible interpretations against the backdrop of Social Capital theory.
+For the theoretical background on Social Capital, I started with Riemer et al. (2005), Adler et al. (2002), Burt et al. (2001), Coleman et al. (1988) and Granovetter et al. (1973) as they are main works on the Social Capital theory.</p>
+<p>The software prototype puts an emphasis on providing automated calculations of the metrics.
+Thus, I implement a backend system, which can calculate and store all metrics without user interaction.
+The analysis results are published via a web service.
+A web frontend consumes this web service and provides up to date visualisation of the data.
+The visualisation design is based on the practical guidelines described in the IBCS Standard.
+It emerged from the academic works of Tufte et al. (2001), Minto et al. (2003), Few et al. (2006), Shneiderman et al. (1996) and Brinton et al. (1914)
+and was edited by Hichert et al. (2011).</p>
+<p><a href="http://www.ibcs-a.org/standards">http://www.ibcs-a.org/standards</a></p>
+<h2 id="from-metrics-to-group-metrics">From Metrics to Group Metrics</h2>
+<p>The metric repository is a general reusable metric repository, that is not specifically adapted to group metrics.
+It contains ego-centric metrics, that are calculated for individual actors and global metrics, that are calculated for the entire network.
+My goal is to apply these general metrics to groups, while I utilise both the ego-centric metrics and global metrics.
+By using ego-centric and global metric, I measure the internal perspective (Structural Holes theory) and the external perspective (Closure theory) as described by Borgatti et al. (1998) and Burt et al. (2001).</p>
+<p>The global metrics are well suited to measure a group&#39;s internal perspective of Social Capital.
+For the analysis of a particular group, I filter out all interactions that do not take place within said group.
+The result is, that only the internal communication of the group is left.
+I use this communication to calculate the global metrics for the particular group.
+From the results of the metric calculation, I can infer conclusions about the internal perspective of Social Capital.</p>
+<p><img src="assets/group_model.png" alt="Modeling Groups as Collective Actors" title="Modeling Groups as Collective Actors"></p>
+<p>I use the ego-centric metrics to measure a group&#39;s external perspective of Social Capital.
+Since the ego-centric metrics are not adapted to groups, they cannot be calculated for groups without preparation.
+To overcome this issue, I propose to model the groups as collective actors based on the Social Capital theory in section social capital.
+According to Adler et al. (2002) individuals can be grouped together to form a collective actor.
+For collective actors the same set of measures can be used as for individuals (Borgatti et al., 1998).</p>
+<p>My approach is illustrated in Figure 2.
+I take all users within a particular group and merge them to a new node,
+which is the collective actor representing the group.</p>
+<p>All incoming and outgoing interactions from the original users are redirected to the new collective actor.
+All internal interactions of the particular group are filtered out, so only external interactions are left.
+I use the external interactions of the collective actor to calculate the ego-centric metrics for the group.
+From the results of the metric calculation, I infer conclusions about the external perspective of Social Capital.</p>
+<p>With my approach, both the internal and external perspective of Social Capital can be measured.
+Based on Burt&#39;s (2001) complementary theory, both perspectives are taken into account to determine the performance of groups.</p>
+
+
+      </div>
+
+    </div>
+  </body>
+</html>

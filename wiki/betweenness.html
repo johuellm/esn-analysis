@@ -1,0 +1,366 @@
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    <title>ESN Group Analysis Platform</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-96472647-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            ESN Group Analysis Platform&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+          </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <form id="form--group-search" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input id="input--group-search" type="text" min="1" class="form-control" placeholder="Group ID" required>
+            </div>
+            <button type="submit" class="btn btn-default">Lookup</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li >
+              <a href="../index.html">Home</a>
+            </li>
+            <li >
+              <a href="../group.html">Details</a>
+            </li>
+            <li  class="active" >
+              <a href="../wiki/index.html">Wiki</a>
+            </li>
+            <li >
+              <a href="../about.html">About</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>    
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+  <div class="card panel panel-default">
+    
+    <div class="panel-heading">
+      <button class="btn btn-default"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseExample"
+              aria-expanded="true"
+              aria-controls="collapseExample"
+      >
+          <span class="glyphicon glyphicon-menu-hamburger"></span> Menu
+      </button>
+    </div>
+
+    <div class="collapse in" id="collapseExample" aria-expanded="true">
+      <div id="overview-last-users" class="panel-body">
+        <div class="btn-group-vertical wiki-sidebar"  role="group">
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-globe"></span>
+            Graph Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="degree.html"
+             role="button"
+          >
+            Degree
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="closeness.html"
+             role="button"
+          >
+            Closeness
+            
+          </a>
+          <a class="btn btn-default btn-block disabled"
+             href="betweenness.html"
+             role="button"
+          >
+            Betweenness
+            <span class="glyphicon glyphicon-triangle-left"></span>
+          </a>
+          <a class="btn btn-default btn-block"
+             href="eigenvector.html"
+             role="button"
+          >
+            Eigenvector
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="density.html"
+             role="button"
+          >
+            Density
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="clustering.html"
+             role="button"
+          >
+            Clustering
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="nodes_edges.html"
+             role="button"
+          >
+            Nodes &amp; Edges
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-user"></span>
+            ESN Metrics
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="messages_created.html"
+             role="button"
+          >
+            Messages Created
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_time.html"
+             role="button"
+          >
+            Avery Time First Reply
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="average_replies.html"
+             role="button"
+          >
+            Avery Replies per Thread
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reciprocity.html"
+             role="button"
+          >
+            Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_reciprocity.html"
+             role="button"
+          >
+            Thread Reciprocity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="reply_creation_ratio.html"
+             role="button"
+          >
+            Reply Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="thread_creation_ratio.html"
+             role="button"
+          >
+            Thread Creation Ratio
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="user_activity.html"
+             role="button"
+          >
+            User Activity over Time
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="group_activity.html"
+             role="button"
+          >
+            Group Activity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="passivity.html"
+             role="button"
+          >
+            Passivity
+            
+          </a>
+          <a class="btn btn-default btn-block"
+             href="registered_date.html"
+             role="button"
+          >
+            Registered Date
+            
+          </a>
+
+          <a class="wiki-sidebar-section btn btn-default btn-block"
+             role="button"
+          >
+            <span class="glyphicon glyphicon-info-sign"></span>
+            Background
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="social_capital.html"
+             role="button"
+          >
+            Social Capital
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="esn.html"
+             role="button"
+          >
+            Enterprise Social Networks
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="sna.html"
+             role="button"
+          >
+            Social Network Analysis
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="research_meth.html"
+             role="button"
+          >
+            Research Methodology
+            
+          </a>    
+
+          <a class="btn btn-default btn-block"
+             href="limitations.html"
+             role="button"
+          >
+            Limitations
+            
+          </a>
+
+          <a class="btn btn-default btn-block"
+             href="literature.html"
+             role="button"
+          >
+            Literature
+            
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'],]}
+  });
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/2.7-latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+    <div class="content-container content-container-wiki">
+
+      <div class="col-xs-12 col-sm-8 col-lg-10 text-justified">
+
+      <div id="loading-box" class="empty-state col-12 text-center">
+        <i class="fa fa-spinner fa-spin"></i>
+        <span>Loading</span>
+      </div>
+
+      
+
+<h1 id="betweenness-centrality">Betweenness Centrality</h1>
+<p><!-- Name Type Subtype Description -->
+The <em>betweenneess centrality</em> measures the likeliness that a node is an intermediary between any other two nodes in the network (Wasserman et al., 1994).
+Such a node with a high betweenness centrality may have high influence in the network as a lot of information is passed by this node (Newman, 2010).
+A high betweenness centrality is achieved, when a node fills a high number of structural holes and the node is in a brokering position (Scott, 2012).</p>
+<p><!-- Scope Literature -->
+Because the betweenness centrality measures the betweenness for a particular node in the network, it is of ego-centric scope.
+The metric was proposed by Smith et al. (2009), Hacker et al. (2015), Viol et al. (2016) and Berger et al. (2014) and discussed in Wasserman et al. (1994).</p>
+<h2 id="calculation">Calculation</h2>
+<p><!-- Calculation --> 
+Mathematically a node is in this position, if it lies on the geodesic path of two other nodes.
+According to Freeman (1977) the betweenness centrality of a node $ v $ is defined as $ b(v_i) $
+and is calculated by the probability of the node $ v $ being on any geodesic path between two other nodes $ v_j $ and $ v_k $ with $ i \neq j \neq k $.
+The number of geodesic paths between the nodes $ v_j $ and $ v_k $ is defined as $ geop_{j,k} $.
+It is assumed that all of these paths are equally probable to be chosen for a communication action.
+Thus, the probability for a communication action using a particular path is $ 1/geop_{j,k} $.
+Furthermore, we define the $ geop_{j,k} (v_i) $ as the number of geodesic paths that contain the node $ v_i $.
+This results in the following formula describing the probability that the node $ v_i $
+falls on a randomly selected geodesic path between $ v_j $ and $ v_k $:
+$$ p_{geop} (v_i) = \frac{1}{geop_{j,k}} * geop_{j,k}(v_i), $$</p>
+<p>which is shortened to:
+$$ p_{geop} (v_i) = \frac{geop_{j,k}(v_i)}{geop_{j,k}}. $$</p>
+<p>For getting to the betweenness centrality $ b(v_i) $, the sum of the above probability
+ over all unordered pairs of nodes not including $ v_i $ is calculated:
+$$ b(v_i) = \sum_{j \neq k} p_{geop} (v_i), $$</p>
+<p>or written as:
+$$ b(v_i) = \sum_{j \neq k} \frac{geop_{j,k}(v_i)}{geop_{j,k}}. $$</p>
+<p>Wasserman et al. (1994) suggest a normalisation of Freeman&#39;s formula, similar to degree- and closeness centrality.
+In a network of size $ g $, the maximum value for the betweenness centrality is $ (g-1)(g-2)/2 $, in case the node $ v_i $
+lies on each of the geodesic paths.
+Therefore we normalise the formula to a final version:
+$$ b&#39;(v_i) = \frac{b(v_i)}{(g-1)(g-2)/2}. $$</p>
+<h2 id="interpretation">Interpretation</h2>
+<p><!-- Interpretation/Dimension -->
+Since a high betweenness centrality is achieved, when a node is in a brokering position, it causes Bridging Social Capital.
+Therefore a high value indicates that a user has a lot of connections which pass information along him.
+The position in the network of such a user, allows him to exert influence over the flow of information.
+As he can decide to withhold or pass along information, the user is in a position of power (Wasserman et al., 1994).</p>
+<p>This power makes users to important knowledge hubs according to Berger et al. (2014).
+They are required to distribute the information in the network
+and diffuse innovative ideas to other groups of people in the network.
+Angeletou et al. (2011) acknowledge this and relate a high value to an <em>influencer</em> type of person.
+<em>Influencer</em>s are able to initiate discussions and spread information by engaging in extended conversations.
+The engagement characteristic is picked up by Hacker et al. (2015), who describe it as &quot;<em>high levels of continuous engagement</em>&quot; (p. 17).
+It is related to a brokering position in the network and thus constitutes for Bridging Social Capital.</p>
+<p>Riemer et al. (2015) remark that for the brokering effect to take place and improve the individuals performance,
+a regular activity in the network is required.
+Therefore a low betweenness centrality implies a lack of Bridging Social Capital.</p>
+
+
+      </div>
+
+    </div>
+  </body>
+</html>
